@@ -1,0 +1,180 @@
+{ 
+    "Dataset":  
+    [ 
+        {
+            "question": "What project put the first Americans into space?", 
+            "aave_question": "What project got the first Americans up in space?", 
+            "xlsx_row": "36"
+        }, 
+        {
+            "question": "What city has the biggest port in Germany?", 
+            "aave_question": "What city got the biggest port in Germany?",  
+            "xlsx_row": "65"
+        }, 
+        {
+            "question": "When was the prime number theorem proven?", 
+            "aave_question": "When did they prove the prime number theorem?", 
+            "xlsx_row": "66"
+        }, 
+        {
+            "question": "Where is Brazil ranked globally in soybean production?", 
+            "aave_question": "Where does Brazil stand in the worldwide soybean game?", 
+            "xlsx_row": "132"
+        }, 
+        {
+            "question": "What kind of chloroplasts do cryptophytes have?", 
+            "aave_question": "What kinda chloroplasts do cryptophytes have?", 
+            "xlsx_row": "138"
+        }, 
+        {
+            "question": "What principle relates to the formation of faults and the age of the sequences through which they cut?", 
+            "aave_question": "What principle deals with how faults form and the age of the layers they cut through?", 
+            "xlsx_row": "139"
+        }, 
+        {
+            "question": "Besides the analytic property of numbers, what other property of numbers does number theory focus on?", 
+            "aave_question": "Besides the analytic property of numbers, what other property does number theory focus on?", 
+            "xlsx_row": "192"
+        }, 
+        { 
+            "question": "What does `TGIF` stand for?", 
+            "aave_question": "What does `TGIF` mean?", 
+            "xlsx_row": "235"
+        }, 
+        { 
+            "question": "What geometric shape is used in equations to determine net force?", 
+            "aave_question": "What shape do they use in them equations to figure out net force?", 
+            "xlsx_row": "265"
+        }, 
+        { 
+            "question": "What is the immune system?", 
+            "aave_question": "What's the immune system?", 
+            "xlsx_row": "310"
+        }, 
+        { 
+            "question": "How many large public parks does Fresno have?", 
+            "aave_question": "How many big public parks Fresno got?", 
+            "xlsx_row": "311"
+        }, 
+        { 
+            "question": "What molecules are recognized as foreign by the immune system?", 
+            "aave_question": "What molecules the immune system see as foreign?", 
+            "xlsx_row": "318"
+        }, 
+        { 
+            "question": "How is oxygen produced from carbon dioxide on the other planets of the solar system?", 
+            "aave_question": "How do planets in the solar system make oxygen from carbon dioxide?", 
+            "xlsx_row": "390"
+        }, 
+        { 
+            "question": "Rudyard Kipling was an influential spokesman for what?", 
+            "aave_question": "Rudyard Kipling was a big voice for what?", 
+            "xlsx_row": "398"
+        }, 
+        { 
+            "question": "For most organisms, what is the dominant system of defense?", 
+            "aave_question": "For most living things, what's the main defense system?", 
+            "xlsx_row": "428"
+        }, 
+        { 
+            "question": "How many buildings were razed by the Jacksonville fire?", 
+            "aave_question": "How many buildings got burned down in that Jacksonville fire?", 
+            "xlsx_row": "456"
+        }, 
+        { 
+            "question": "What does matter actually have that Newtonian mechanics doesn't address?", 
+            "aave_question": "What matter really got that Newtonian mechanics don't mention?", 
+            "xlsx_row": "470"
+        }, 
+        { 
+            "question": "Inflammation occurs during sleep times because of the presence of what molecule?", 
+            "aave_question": "Inflammation happens at nighttime 'cause of what molecule?", 
+            "xlsx_row": "519"
+        }, 
+        { 
+            "question": "What is used to estimate emissions?", 
+            "aave_question": "What do they use to estimate emissions?", 
+            "xlsx_row": "538"
+        }, 
+        { 
+            "question": "Disruptions in sleep can lead to increase in what chronic conditions?", 
+            "aave_question": "Disruptions in sleep can lead to more problems like what chronic conditions?", 
+            "xlsx_row": "572"
+        }, 
+        { 
+            "question": "How many major immune responses do plants have?", 
+            "aave_question": "How many major immune responses plants be havin'?", 
+            "xlsx_row": "576"
+        }, 
+        { 
+            "question": "Time and space are both examples of what type of resource?", 
+            "aave_question": "Time and space are both what kinda resources?", 
+            "xlsx_row": "641"
+        }, 
+        { 
+            "question": "What major crop was brought to China from the west?", 
+            "aave_question": "What big crop got brought to China from the west?", 
+            "xlsx_row": "678"
+        }, 
+        { 
+            "question": "How much rain per year does Fresno get on average?", 
+            "aave_question": "How much rain does Fresno get on average each year?", 
+            "xlsx_row": "716"
+        }, 
+        { 
+            "question": "Xenoliths are picked up by what and deposited into the matrix of igneous rocks?", 
+            "aave_question": "Xenoliths get picked up by what and dropped into the matrix of igneous rocks?", 
+            "xlsx_row": "763"
+        }, 
+        { 
+            "question": "What is a common occurrence during summer days?", 
+            "aave_question": "What common thing happens on summer days?", 
+            "xlsx_row": "769"
+        }, 
+        { 
+            "question": "What theology states that faith alone isn't enough to justify man?", 
+            "aave_question": "What theology says that faith alone ain't enough for justification?", 
+            "xlsx_row": "780"
+        }, 
+        { 
+            "question": "What type of motivators are achievement and self determination considered?", 
+            "aave_question": "What type of motivators are achievement and self-determination?", 
+            "xlsx_row": "782"
+        }, 
+        { 
+            "question": "What month is the warmest in Fresno?", 
+            "aave_question": "What month be the warmest in Fresno?", 
+            "xlsx_row": "833"
+        }, 
+        { 
+            "question": "What are the stages in a compound engine called?", 
+            "aave_question": "What they call the stages in a compound engine?", 
+            "xlsx_row": "838"
+        }, 
+        { 
+            "question": "What is the largest city in Poland?", 
+            "aave_question": "What's the biggest city in Poland?", 
+            "xlsx_row": "878"
+        }, 
+        { 
+            "question": "What is the study of proteins involved in immune response known as?", 
+            "aave_question": "What they call the study of proteins that deal with immune response?", 
+            "xlsx_row": "924"
+        }, 
+        { 
+            "question": "What does it mean when a harmonic series diverges?", 
+            "aave_question": "What it mean when a harmonic series diverges?", 
+            "xlsx_row": "951"
+        }, 
+        { 
+            "question": "From which countries did the Norse originate?", 
+            "aave_question": "Where the Norse come from?", 
+            "xlsx_row": "968"
+        },  
+        { 
+            "question": "When was the ability to use radioactive isotopes to date rock formations developed?", 
+            "aave_question": "When they start usin' radioactive isotopes to date rocks?", 
+            "xlsx_row": "980"
+        }
+    ]
+}
