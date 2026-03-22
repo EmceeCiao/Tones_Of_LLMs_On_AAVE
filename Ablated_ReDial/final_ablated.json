@@ -1,0 +1,16 @@
+[ 
+    {  
+        "vanilla_prompt": "Write a function to sort the given list.\nassert python_function([1, 3, 5, 7, 9, 2, 4, 6, 8, 0])==[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\nGenerate a Python function to solve this problem. Ensure the generated function is named as python_function.",
+        "aave_prompt": "Cook up a function that be sortin' the given list.\nassert python_function([1, 3, 5, 7, 9, 2, 4, 6, 8, 0])==[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\nYou gotta whip up a Python function to handle this problem. You gon' make sure the function name right, which gotta python_function.",
+        "data_name": "mbpp",
+        "function_name": "heap_sort",
+        "task_idx": "Mbpp/635"
+    }, 
+    { 
+        "vanilla_prompt": "Write a function to find the area of a rectangle.\nassert python_function(10,20)==200\nGenerate a Python function to solve this problem. Ensure the generated function is named as python_function.",
+        "aave_prompt": "Aight, you gon' write a function findin' out the area of a rectangle.\nassert python_function(10,20)==200\nYou gotta whip up a Python function to handle this problem. You gon' make sure the function name right, which gotta python_function.",
+        "data_name": "mbpp",
+        "function_name": "rectangle_area",
+        "task_idx": "Mbpp/458"
+    }
+]

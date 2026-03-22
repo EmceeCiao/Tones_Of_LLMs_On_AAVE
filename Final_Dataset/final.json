@@ -1,0 +1,92 @@
+[
+    {  
+        "category": "Algorithm", 
+        "round": 1, 
+        "sae_text": "Write a function to sort the given list.\nassert python_function([1, 3, 5, 7, 9, 2, 4, 6, 8, 0])==[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\nGenerate a Python function to solve this problem. Ensure the generated function is named as python_function.",
+        "aave_text": "Cook up a function that be sortin' the given list.\nassert python_function([1, 3, 5, 7, 9, 2, 4, 6, 8, 0])==[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\nYou gotta whip up a Python function to handle this problem. You gon' make sure the function name right, which gotta python_function."
+    }, 
+    {   
+        "category": "Algorithm", 
+        "round": 1, 
+        "sae_text": "Write a function to find the area of a rectangle.\nassert python_function(10,20)==200\nGenerate a Python function to solve this problem. Ensure the generated function is named as python_function.",
+        "aave_text": "Aight, you gon' write a function findin' out the area of a rectangle.\nassert python_function(10,20)==200\nYou gotta whip up a Python function to handle this problem. You gon' make sure the function name right, which gotta python_function."
+    }, 
+    {  
+        "category": "QA", 
+        "round": 1, 
+        "sae_text": "What geometric shape is used in equations to determine net force?", 
+        "aave_text": "What shape do they use in them equations to figure out net force?" 
+    },
+    { 
+        "category": "QA", 
+        "round": 1,  
+        "sae_text": "What project put the first Americans into space?", 
+        "aave_text": "What project got the first Americans up in space?"
+    },
+    { 
+        "category": "QA", 
+        "round": 1, 
+        "sae_text": "How many large public parks does Fresno have?", 
+        "aave_text": "How many big public parks Fresno got?" 
+    }, 
+    { 
+        "category": "QA", 
+        "round": 1, 
+        "sae_text": "For most organisms, what is the dominant system of defense?", 
+        "aave_text": "For most living things, what's the main defense system?" 
+    },
+    {
+        "category": "ELI5", 
+        "round": 1, 
+        "sae_text": "Why do I have to negotiate a price when Im buying a new car as opposed to all new cars just having a barcode and everyone paying the same price? Why cant I negotiate the price of a shirt Im buying at walmart?", 
+        "aave_text": "How come I gotta negotiate the price when I'm tryna get a new car instead of all the cars having a barcode so everybody pay the same amount? But when I'm getting a shirt at Walmart, I can't change the price?"
+    },
+    {
+        "category": "ELI5", 
+        "round": 1, 
+        "sae_text": "Why is it that my Iphone dies before it reaches 0% battery, it sometimes even dies at 20%?", 
+        "aave_text": "Why my IPhone be dying before it even hit 0%? Sometimes it be shutting off at like 20%?"
+    },
+    {
+        "category": "ELI5", 
+        "round": 1, 
+        "sae_text": "When I delete a picture or program, what actually happens to it?", 
+        "aave_text": "What actually happen when I delete a pic or app?"
+    },
+    {
+        "category": "ELI5", 
+        "round": 1, 
+        "sae_text": "Why is the QWERTY keyboard configured the way that it is?", 
+        "aave_text": "Why is the QWERTY keyboard set up like that?"
+    }, 
+    {
+        "category": "ELI5", 
+        "round": 1, 
+        "sae_text": "Why do liquids like coffee and soda dehydrate people despite being mostly water?",
+        "aave_text": "Why coffee and soda dehydrate you if they mostly water?"
+    },
+    {
+        "category": "ELI5", 
+        "round": 1, 
+        "sae_text": "Why do a lot of people feel more tired in the morning and more awake at night?", 
+        "aave_text": "Why mad people be feeling more tired in the morning but be fine at night?"
+    },
+    {
+        "category": "ELI5", 
+        "round": 1, 
+        "sae_text": "What happens when we get a song stuck in our heads? Why does it happen?", 
+        "aave_text": "What happens when a song get stuck in your head?  Why is that?"
+    },
+    {
+        "category": "ELI5", 
+        "round": 1, 
+        "sae_text": "How do scientists find the age of a living tree without actually cutting it down and counting the rings?", 
+        "aave_text": "How do scientists be knowing how old a tree is if they don't cut it down and count the rings?"
+    },
+    {
+        "category": "ELI5", 
+        "round": 1, 
+        "sae_text": "How do television channels make money?", 
+        "aave_text": "How do TV channels be making they money?"
+    }
+]

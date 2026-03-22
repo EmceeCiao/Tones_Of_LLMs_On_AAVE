@@ -1,0 +1,22 @@
+[ 
+    { 
+        "question": "What geometric shape is used in equations to determine net force?", 
+        "aave_question": "What shape do they use in them equations to figure out net force?", 
+        "xlsx_row": "265"
+    },
+    {
+        "question": "What project put the first Americans into space?", 
+        "aave_question": "What project got the first Americans up in space?", 
+        "xlsx_row": "36"
+    },
+    { 
+        "question": "How many large public parks does Fresno have?", 
+        "aave_question": "How many big public parks Fresno got?", 
+        "xlsx_row": "311"
+    }, 
+    { 
+        "question": "For most organisms, what is the dominant system of defense?", 
+        "aave_question": "For most living things, what's the main defense system?", 
+        "xlsx_row": "428"
+    }
+]
