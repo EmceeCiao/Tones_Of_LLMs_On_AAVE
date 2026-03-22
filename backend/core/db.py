@@ -20,19 +20,9 @@ Example (FastAPI):
         return session.exec(select(User)).all()
 """
 
-from __future__ import annotations
-
 from typing import Generator
 
 from sqlmodel import Session, SQLModel, create_engine
-
-from backend.schemas import (
-    GeneratedResponse,
-    LikertQuestion,
-    PromptTemplate,
-    SurveySubmission,
-    User,
-)
 
 
 DATABASE_URL = "sqlite:///./app.db"
