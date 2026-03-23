@@ -137,6 +137,7 @@ def test_create_likert_questions():
     payload = {
         "question": "How natural does this sound?",
         "dimension": "naturalness",
+        "display_order": 5,
         "scale_min": 1,
         "scale_max": 5
     }
@@ -263,7 +264,7 @@ def test_get_submission_items_unauthorized():
     response_pair = create_generated_response_pair(
         session, prompt.id, "method", "model", "aave_resp", "sae_resp"
     )
-    create_likert_question(session, "Q1", "naturalness")
+    create_likert_question(session, "Q1", 5, "naturalness")
     create_survey_item(session, 1, "Cat", prompt.id, response_pair.id)
     submission = create_survey_submission(session, user1.id, 1)
     session.close()
@@ -352,6 +353,7 @@ def test_multiple_likert_questions():
     for question, dimension in zip(questions, dimensions):
         payload = {
             "question": question,
+            "display_order": 5,
             "dimension": dimension,
             "scale_min": 1,
             "scale_max": 5
