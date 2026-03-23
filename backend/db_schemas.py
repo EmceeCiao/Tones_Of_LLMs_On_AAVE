@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timezone
 from enum import Enum
 from typing import Optional
 
@@ -101,7 +101,7 @@ class SurveySubmission(SQLModel, table=True):
     user_id: int = Field(foreign_key="users.id")
     round: int
     short_answer: str | None = None
-    created_at: datetime = Field(default_factory=datetime.utcnow)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
 
     user: Optional["User"] = Relationship(back_populates="submissions")
     item_responses: list["SurveyItemResponse"] = Relationship(back_populates="submission")

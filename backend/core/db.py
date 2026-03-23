@@ -23,9 +23,10 @@ Example (FastAPI):
 from typing import Generator
 
 from sqlmodel import Session, SQLModel, create_engine
+from backend.core.config import settings
 
 
-DATABASE_URL = "sqlite:///./app.db"
+DATABASE_URL = settings.DATABASE_URL
 
 engine = create_engine(DATABASE_URL, echo=False, connect_args={"check_same_thread": False})
 

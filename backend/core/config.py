@@ -1,10 +1,10 @@
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from typing import Optional
-
+import json
 
 class Settings(BaseSettings):
     DATABASE_URL: Optional[str] = "sqlite:///./app.db"
-    FIREBASE_SERVICE_ACCOUNT_PATH: Optional[str] = None
+    FIREBASE_SERVICE_ACCOUNT_PATH: Optional[str] = "/Users/kellychen/repos/Tones_Of_LLMs_On_AAVE/backend/firebase_service_acc.json"
     DEBUG: bool = False
     APP_ENV: str = "dev"
 
