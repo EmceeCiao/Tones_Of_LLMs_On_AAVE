@@ -139,6 +139,9 @@ class MultipleChoiceResponse(SQLModel, table=True):
     answer_choice: str
     short_answer: str | None = None
     
+    item_response: Optional["SurveyItemResponse"] = Relationship(back_populates="mcq_answers")
+
+    
     
 
 # Response models for API payloads (read-only views of nested data)
