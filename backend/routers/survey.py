@@ -11,7 +11,8 @@ from backend.models import (
     update_survey_item_response,
     create_survey_item_response,
     list_survey_items,
-    list_likert_questions
+    list_likert_questions,
+    list_multiple_choice_questions
     
 )
 from backend.db_schemas import (
@@ -73,6 +74,9 @@ async def get_submission_items_by_id(
     likert_questions = list_likert_questions(
         session=session
     )
+    mcq = list_multiple_choice_questions(
+        session=session
+    )
     
     survey_item_details=[]
     for item in survey_item_list:
@@ -89,12 +93,14 @@ async def get_submission_items_by_id(
                 aave_response=item.response_pair.aave_response,
                 sae_response=item.response_pair.sae_response,
             ),
-            likert_question_resp=item_resp.likert_answers if item_resp else []
+            likert_question_resp=item_resp.likert_answers if item_resp else [],
+            mcq_resp=item_resp.mcq_answers if item_resp else [],
         )
         survey_item_details.append(detail_item)
     return SubmissionItemsResponse(
         submission_id=submission.id,
         likert_questions=likert_questions,
+        mcq_questions=mcq,
         items=survey_item_details
     )
 
@@ -122,6 +128,7 @@ async def get_survey_item_by_id(
             submission_id=survey_item_resp.submission_id,
             survey_item_id=survey_item_resp.survey_item_id,
             likert_answers=survey_item_resp.likert_answers,
+            mcq_answers=survey_item_resp.mcq_answers,
             submission=survey_item_resp.submission,
             survey_item=survey_item_resp.survey_item
         )
@@ -130,6 +137,7 @@ async def get_survey_item_by_id(
         submission_id=survey_item_resp.submission_id,
         survey_item_id=survey_item_resp.survey_item_id,
         likert_answers=survey_item_resp.likert_answers,
+        mcq_answers=survey_item_resp.mcq_answers,
         submission=survey_item_resp.submission,
         survey_item=survey_item_resp.survey_item
     )

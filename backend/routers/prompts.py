@@ -9,6 +9,7 @@ from backend.models import (
     create_generated_response_pair,
     create_survey_item,
     create_likert_question,
+    create_multiple_choice_question,
     list_survey_items
 )
 from backend.db_schemas import (
@@ -16,7 +17,7 @@ from backend.db_schemas import (
     PromptPair,
     GeneratedResponsePair,
     SurveyItem,
-    SurveyItemResponse,
+    MultipleChoice,
 )
 
 router = APIRouter(
@@ -52,6 +53,9 @@ async def create_response_pair_endpoint(
         )
     
 @router.post("/survey-items", response_model=SurveyItem)
+# Create object to display prompt pair and response pair
+# Category is for the dataset (i.e. ELI5, Algo, or Custom)
+
 async def create_survey_items(
     survey_item: SurveyItem, session: Session = Depends(get_session)
 ) -> SurveyItem :
@@ -72,9 +76,23 @@ async def create_likert_questions(
     return create_likert_question(
         session=session,
         question=likert_q.question,
+        display_order=likert_q.display_order,
         dimension=likert_q.dimension,
         scale_min=likert_q.scale_min,
-        scale_max=likert_q.scale_max
+        scale_max=likert_q.scale_max,
+        short_answer_question=likert_q.short_answer_question
+    )
+    
+@router.post("/mcq", response_model=MultipleChoice)
+async def create_mcq(
+    mcq: MultipleChoice, session: Session = Depends(get_session)
+) -> MultipleChoice :
+    return create_multiple_choice_question(
+        session=session,
+        question=mcq.question,
+        display_order=mcq.display_order,
+        choices=mcq.choices,
+        short_answer_question=mcq.short_answer_question,
     )
     
 @router.get("/survey-items", response_model=list[SurveyItem])

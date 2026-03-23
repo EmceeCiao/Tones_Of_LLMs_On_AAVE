@@ -3,7 +3,7 @@ from fastapi import Depends, FastAPI
 from sqlmodel import select
 
 from backend.core.db import get_session, init_db
-from backend.db_schemas import User
+# from backend.db_schemas import User
 
 from backend.routers import prompts, survey
 

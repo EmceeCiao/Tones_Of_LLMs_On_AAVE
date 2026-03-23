@@ -4,6 +4,7 @@ from typing import Optional
 
 from pydantic import EmailStr
 from sqlmodel import SQLModel, Field, Relationship
+from sqlalchemy import Column, JSON
 
 
 class PromptVariant(str, Enum):
@@ -61,6 +62,7 @@ class SurveyItem(SQLModel, table=True):
 
     prompt_pair: Optional["PromptPair"] = Relationship(back_populates="survey_items")
     response_pair: Optional["GeneratedResponsePair"] = Relationship(back_populates="survey_items")
+        
     item_responses: list["SurveyItemResponse"] = Relationship(back_populates="survey_item")
 
 class SurveyItemResponse(SQLModel, table=True):
@@ -73,6 +75,7 @@ class SurveyItemResponse(SQLModel, table=True):
         submission: SurveySubmission (optional)
         survey_item: SurveyItem (optional)
         likert_answers: list[LikertResponse]
+        mcq_answers: list[MultipleChoiceResponse]
     """
     __tablename__ = "survey_item_responses"
 
@@ -83,17 +86,27 @@ class SurveyItemResponse(SQLModel, table=True):
     submission: Optional["SurveySubmission"] = Relationship(back_populates="item_responses")
     survey_item: Optional["SurveyItem"] = Relationship(back_populates="item_responses")
     likert_answers: list["LikertResponse"] = Relationship(back_populates="item_response")
+    mcq_answers: list["MultipleChoiceResponse"] = Relationship(back_populates="item_response")
 
 class LikertQuestion(SQLModel, table=True):
     __tablename__ = "likert_questions"
 
     id: int | None = Field(default=None, primary_key=True)
     question: str
+    display_order: int
+    short_answer_question: str | None = None
     dimension: str              # e.g. naturalness, clarity, fairness, preference
     scale_min: int = 1
     scale_max: int = 5
 
-
+class MultipleChoice(SQLModel, table=True):
+    __tablename__= "multiple_choice"
+    id: int | None = Field(default=None, primary_key=True)
+    display_order: int
+    question: str
+    short_answer_question: str | None = None
+    choices: list[str] = Field(sa_column=Column(JSON), default_factory=list)
+    
 class SurveySubmission(SQLModel, table=True):
     __tablename__ = "survey_submissions"
 
@@ -114,10 +127,19 @@ class LikertResponse(SQLModel, table=True):
     item_response_id: int = Field(foreign_key="survey_item_responses.id")
     question_id: int = Field(foreign_key="likert_questions.id")
     value: int
-    comment: str | None = None
+    short_answer: str | None = None
 
     item_response: Optional["SurveyItemResponse"] = Relationship(back_populates="likert_answers")
 
+class MultipleChoiceResponse(SQLModel, table=True):
+    __tablename__= "multiple_choice_response"
+    id: int | None = Field(default=None, primary_key=True)
+    item_response_id: int = Field(foreign_key="survey_item_responses.id")
+    question_id: int = Field(foreign_key="multiple_choice.id")
+    answer_choice: str
+    short_answer: str | None = None
+    
+    
 
 # Response models for API payloads (read-only views of nested data)
 
@@ -146,9 +168,11 @@ class SurveyItemDetail(SQLModel):
     prompt_pair: PromptPairDetail
     response_pair: ResponsePairDetail
     likert_question_resp: Optional[list["LikertResponse"]]
+    mcq_resp: Optional[list["MultipleChoiceResponse"]]
 
 class SubmissionItemsResponse(SQLModel):
     """Response for GET /submissions/{submission_id}/items endpoint."""
     submission_id: int
     likert_questions: list["LikertQuestion"]
+    mcq_questions: list["MultipleChoice"]
     items: list[SurveyItemDetail]

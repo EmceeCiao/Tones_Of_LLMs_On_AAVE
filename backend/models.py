@@ -18,6 +18,8 @@ from backend.db_schemas import (
     GeneratedResponsePair,
     LikertQuestion,
     LikertResponse,
+    MultipleChoice, 
+    MultipleChoiceResponse,
     PromptPair,
     SurveyItem,
     SurveyItemResponse,
@@ -319,15 +321,19 @@ def delete_survey_item(session: Session, survey_item_id: int) -> bool:
 def create_likert_question(
     session: Session,
     question: str,
+    display_order:str,
     dimension: str,
     scale_min: int = 1,
     scale_max: int = 5,
+    short_answer_question: str | None = None,
 ) -> LikertQuestion:
     likert_question = LikertQuestion(
         question=question,
+        display_order=display_order,
         dimension=dimension,
         scale_min=scale_min,
         scale_max=scale_max,
+        short_answer_question=short_answer_question
     )
     session.add(likert_question)
     session.commit()
@@ -375,6 +381,67 @@ def delete_likert_question(session: Session, question_id: int) -> bool:
         return False
 
     session.delete(likert_question)
+    session.commit()
+    return True
+
+# ---------------------------------------------------------------------------
+# Multiple Choice Question
+# ---------------------------------------------------------------------------
+
+def create_multiple_choice_question(
+    session: Session,
+    question: str,
+    display_order: int,
+    choices: list[str],
+    short_answer_question: str | None = None,
+) -> MultipleChoice:
+    multiple_choice_q = MultipleChoice(
+        question=question,
+        display_order=display_order,
+        choices=choices,
+        short_answer_question=short_answer_question
+    )
+    session.add(multiple_choice_q)
+    session.commit()
+    session.refresh(multiple_choice_q)
+    return multiple_choice_q
+
+
+def get_multiple_choice_question(session: Session, question_id: int) -> Optional[MultipleChoice]:
+    return session.get(MultipleChoice, question_id)
+
+
+def list_multiple_choice_questions(
+    session: Session,
+) -> list[MultipleChoice]:
+    statement = select(MultipleChoice)
+
+    statement = statement.order_by(MultipleChoice.id)
+    return list(session.exec(statement).all())
+
+
+def update_multiple_choice_questions(
+    session: Session,
+    question_id: int,
+    **updates: Any,
+) -> Optional[MultipleChoice]:
+    mcq = get_multiple_choice_question(session, question_id)
+    if not mcq:
+        return None
+
+    _apply_updates(mcq, updates)
+    session.add(mcq)
+    session.commit()
+    session.refresh(mcq)
+    return mcq
+
+
+def delete_multiple_choice_question(session: Session, question_id: int) -> bool:
+    mcq = get_multiple_choice_question(session, question_id)
+    if not mcq:
+        return False
+
+    session.delete(mcq)
     session.commit()
     return True
 
@@ -459,12 +526,17 @@ def create_survey_item_response(
     submission_id: int,
     survey_item_id: int,
     likert_answers: list[LikertResponse] = [],
+    mcq_answers: list[MultipleChoiceResponse] = [], 
     submission: Optional[SurveySubmission] = None,
     survey_item: Optional[SurveyItem] = None,
 ) -> SurveyItemResponse:
     item_response = SurveyItemResponse(
         submission_id=submission_id,
         survey_item_id=survey_item_id,
+        likert_answers= likert_answers,
+        mcq_answers = mcq_answers,
+        submission = submission,
+        survey_item = survey_item
     )
     session.add(item_response)
     session.commit()
@@ -531,13 +603,13 @@ def create_likert_response(
     item_response_id: int,
     question_id: int,
     value: int,
-    comment: str | None = None,
+    short_answer: str | None = None,
 ) -> LikertResponse:
     likert_response = LikertResponse(
         item_response_id=item_response_id,
         question_id=question_id,
         value=value,
-        comment=comment,
+        short_answer=short_answer,
     )
     session.add(likert_response)
     session.commit()
@@ -588,5 +660,72 @@ def delete_likert_response(session: Session, likert_response_id: int) -> bool:
         return False
 
     session.delete(likert_response)
+    session.commit()
+    return True
+
+# ---------------------------------------------------------------------------
+# Multiple Choice Response
+# ---------------------------------------------------------------------------
+def create_multiple_choice_response(
+    session: Session,
+    question_id: int,
+    answer_choice: str,
+    short_answer: str | None = None,
+) -> MultipleChoiceResponse:
+    multiple_choice_resp = MultipleChoiceResponse(
+        question_id=question_id,
+        answer_choice=answer_choice,
+        short_answer=short_answer
+    )
+    session.add(multiple_choice_resp)
+    session.commit()
+    session.refresh(multiple_choice_resp)
+    return multiple_choice_resp
+
+
+def get_multiple_choice_response(session: Session, resp_id: int) -> Optional[MultipleChoiceResponse]:
+    return session.get(MultipleChoiceResponse, resp_id)
+
+
+def list_multiple_choice_responses(
+    session: Session,
+    *,
+    resp_id: int | None = None,
+    mcq_id: int | None = None,
+) -> list[MultipleChoiceResponse]:
+    statement = select(MultipleChoiceResponse)
+    
+    if resp_id is not None:
+        statement = statement.where(MultipleChoiceResponse.id == resp_id)
+    if mcq_id is not None:
+        statement = statement.where(MultipleChoiceResponse.question_id == mcq_id)
+
+
+    statement = statement.order_by(MultipleChoiceResponse.id)
+    return list(session.exec(statement).all())
+
+
+def update_multiple_choice_responses(
+    session: Session,
+    mcq_id: int,
+    **updates: Any,
+) -> Optional[MultipleChoiceResponse]:
+    mcq_resp = get_multiple_choice_response(session, mcq_id)
+    if not mcq_resp:
+        return None
+
+    _apply_updates(mcq_resp, updates)
+    session.add(mcq_resp)
+    session.commit()
+    session.refresh(mcq_resp)
+    return mcq_resp
+
+
+def delete_multiple_choice_responses(session: Session, resp_id: int) -> bool:
+    mcq_resp = get_multiple_choice_response(session, resp_id)
+    if not mcq_resp:
+        return False
+
+    session.delete(mcq_resp)
     session.commit()
     return True
