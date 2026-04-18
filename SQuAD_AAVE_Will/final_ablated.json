@@ -18,5 +18,25 @@
         "question": "For most organisms, what is the dominant system of defense?", 
         "aave_question": "For most living things, what's the main defense system?", 
         "xlsx_row": "428"
+    }, 
+    {
+        "question": "When was the ability to use radioactive isotopes to date rock formations developed?", 
+        "aave_question": "When they start usin' radioactive isotopes to date rocks?", 
+        "xlsx_row": "980"
+    },
+    {
+        "question": "Disruptions in sleep can lead to increase in what chronic conditions?", 
+        "aave_question": "Disruptions in sleep can lead to more problems like what chronic conditions?", 
+        "xlsx_row": "572"
+    }, 
+    { 
+        "question": "What major crop was brought to China from the west?", 
+        "aave_question": "What big crop got brought to China from the west?", 
+        "xlsx_row": "678"
+    }, 
+    { 
+        "question": "Rudyard Kipling was an influential spokesman for what?", 
+        "aave_question": "Rudyard Kipling was a big voice for what?", 
+        "xlsx_row": "398"
     }
 ]

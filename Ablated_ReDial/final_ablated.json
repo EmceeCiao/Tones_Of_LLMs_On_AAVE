@@ -12,5 +12,19 @@
         "data_name": "mbpp",
         "function_name": "rectangle_area",
         "task_idx": "Mbpp/458"
+    }, 
+    {
+        "vanilla_prompt": "Write a python function to interchange the first and last elements in a list.\nassert python_function([12, 35, 9, 56, 24]) == [24, 35, 9, 56, 12]\nGenerate a Python function to solve this problem. Ensure the generated function is named as python_function.",
+        "aave_prompt": "Aight, come up with a python function that gon' switch up the first and last elements in a list.\nassert python_function([12, 35, 9, 56, 24]) == [24, 35, 9, 56, 12]\nYou gotta whip up a Python function to handle this problem. You gon' make sure the function name right, which gotta python function.", 
+        "data_name": "mbpp",
+        "function_name": "swap_List",
+        "task_idx": "Mbpp/591"
+    }, 
+    {
+        "vanilla_prompt": "Write a python function to find smallest number in a list.\nassert python_function([10, 20, 1, 45, 99]) == 1\nGenerate a Python function to solve this problem. Ensure the generated function is named as python_function.",
+        "aave_prompt": "Here's what you finna do, aight?. Cook up a python function to  find  out the smallest number in a list.\nassert python_function([10, 20, 1, 45, 99]) == 1\nYou gotta whip up a Python function to handle this problem. You gon' make sure the function name right, which gotta python function.",
+        "data_name": "mbpp",
+        "function_name": "smallest_num",
+        "task_idx": "Mbpp/62"
     }
 ]
