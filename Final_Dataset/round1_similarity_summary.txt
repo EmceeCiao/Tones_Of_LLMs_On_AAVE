@@ -1,0 +1,25 @@
+Embedding model: text-embedding-3-large
+Pairs analyzed: 15
+Permutations: 5000
+
+Matched-pair similarity:
+Mean cosine similarity: 0.852291
+Median cosine similarity: 0.865827
+Min cosine similarity: 0.770622
+Max cosine similarity: 0.912461
+Std. dev.: 0.046454
+
+Random-mismatch baseline:
+Mean mismatch cosine similarity: 0.205626
+Median mismatch cosine similarity: 0.204565
+Std. dev. mismatch mean: 0.025877
+
+Matched vs mismatch comparison:
+Mean difference (effect size): 0.646665
+Permutation p-value (matched > mismatched): 0.000200
+
+By category:
+Algorithm: n=2, mean=0.838706, median=0.838706
+ELI5: n=4, mean=0.867825, median=0.892035
+QA: n=3, mean=0.813903, median=0.793410
+Social: n=6, mean=0.865659, median=0.868133
