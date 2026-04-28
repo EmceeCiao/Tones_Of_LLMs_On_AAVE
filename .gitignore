@@ -3,3 +3,4 @@ __pycache__
 .venv
 firebase_service_acc.json
 app.db
+.DS_Store
