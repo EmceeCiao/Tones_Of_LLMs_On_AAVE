@@ -1,0 +1,12 @@
+Pairs analyzed: 15
+Matched-pair mean cosine similarity: 0.852291
+Matched-pair median cosine similarity: 0.865827
+Random-mismatch mean cosine similarity: 0.205626
+Mean difference (effect size): 0.646665
+Permutation p-value (matched > mismatched): 0.000200
+
+By category:
+Algorithm: n=2, mean=0.838705, median=0.838705
+ELI5: n=4, mean=0.867825, median=0.892035
+QA: n=3, mean=0.813903, median=0.793410
+Social: n=6, mean=0.865659, median=0.868134
