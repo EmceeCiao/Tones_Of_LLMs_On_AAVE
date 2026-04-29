@@ -226,11 +226,6 @@
     }, 
     { 
         "category":"QA",
-        "sae_prompt": "How many large public parks does Fresno have?", 
-        "aave_prompt": "How many big public parks Fresno got?" 
-    }, 
-    { 
-        "category":"QA",
         "sae_prompt": "What molecules are recognized as foreign by the immune system?", 
         "aave_prompt": "What molecules the immune system see as foreign?"
     }, 
