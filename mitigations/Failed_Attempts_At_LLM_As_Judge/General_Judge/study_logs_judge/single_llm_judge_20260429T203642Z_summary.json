@@ -1,0 +1,3271 @@
+{
+  "config": {
+    "run_id": "20260429T203642Z",
+    "models": [
+      "gpt-5.4",
+      "gpt-4.1",
+      "gpt-5.5"
+    ],
+    "input_path": "/Users/mehadichowdhury/Documents/Tones_Of_LLMs_On_AAVE/dataset/Final_Dataset/final_prompt_responses.json",
+    "gold_labels": {
+      "P02": "No Preference",
+      "P03": "AAVE",
+      "P05": "AAVE",
+      "P08": "AAVE",
+      "P09": "SAE",
+      "P13": "No Preference"
+    },
+    "num_gold_items": 6,
+    "n_trials": 1,
+    "temperature": 0,
+    "top_p": 1,
+    "judge_prompt_type": "zero_shot_source_prompt_only_swapped_order_margin_rubric",
+    "orderings": [
+      {
+        "order_name": "sae_first",
+        "response_a_label": "SAE",
+        "response_b_label": "AAVE"
+      },
+      {
+        "order_name": "aave_first",
+        "response_a_label": "AAVE",
+        "response_b_label": "SAE"
+      }
+    ]
+  },
+  "metrics": {
+    "SAE": {
+      "support": 6,
+      "predicted_count": 23,
+      "true_positive": 6,
+      "false_positive": 17,
+      "false_negative": 0,
+      "precision": 0.2608695652173913,
+      "recall": 1.0,
+      "f1": 0.41379310344827586
+    },
+    "AAVE": {
+      "support": 18,
+      "predicted_count": 4,
+      "true_positive": 4,
+      "false_positive": 0,
+      "false_negative": 14,
+      "precision": 1.0,
+      "recall": 0.2222222222222222,
+      "f1": 0.3636363636363636
+    },
+    "No Preference": {
+      "support": 12,
+      "predicted_count": 9,
+      "true_positive": 7,
+      "false_positive": 2,
+      "false_negative": 5,
+      "precision": 0.7777777777777778,
+      "recall": 0.5833333333333334,
+      "f1": 0.6666666666666666
+    },
+    "overall": {
+      "total": 36,
+      "correct": 17,
+      "accuracy": 0.4722222222222222,
+      "invalid_predictions": 0,
+      "tie_predictions": 0
+    },
+    "confusion_matrix": {
+      "SAE": {
+        "SAE": 6,
+        "AAVE": 0,
+        "No Preference": 0,
+        "Invalid": 0,
+        "Tie": 0
+      },
+      "AAVE": {
+        "SAE": 12,
+        "AAVE": 4,
+        "No Preference": 2,
+        "Invalid": 0,
+        "Tie": 0
+      },
+      "No Preference": {
+        "SAE": 5,
+        "AAVE": 0,
+        "No Preference": 7,
+        "Invalid": 0,
+        "Tie": 0
+      }
+    }
+  },
+  "model_metrics": {
+    "gpt-4.1": {
+      "overall": {
+        "SAE": {
+          "support": 2,
+          "predicted_count": 6,
+          "true_positive": 2,
+          "false_positive": 4,
+          "false_negative": 0,
+          "precision": 0.3333333333333333,
+          "recall": 1.0,
+          "f1": 0.5
+        },
+        "AAVE": {
+          "support": 6,
+          "predicted_count": 2,
+          "true_positive": 2,
+          "false_positive": 0,
+          "false_negative": 4,
+          "precision": 1.0,
+          "recall": 0.3333333333333333,
+          "f1": 0.5
+        },
+        "No Preference": {
+          "support": 4,
+          "predicted_count": 4,
+          "true_positive": 3,
+          "false_positive": 1,
+          "false_negative": 1,
+          "precision": 0.75,
+          "recall": 0.75,
+          "f1": 0.75
+        },
+        "overall": {
+          "total": 12,
+          "correct": 7,
+          "accuracy": 0.5833333333333334,
+          "invalid_predictions": 0,
+          "tie_predictions": 0
+        },
+        "confusion_matrix": {
+          "SAE": {
+            "SAE": 2,
+            "AAVE": 0,
+            "No Preference": 0,
+            "Invalid": 0,
+            "Tie": 0
+          },
+          "AAVE": {
+            "SAE": 3,
+            "AAVE": 2,
+            "No Preference": 1,
+            "Invalid": 0,
+            "Tie": 0
+          },
+          "No Preference": {
+            "SAE": 1,
+            "AAVE": 0,
+            "No Preference": 3,
+            "Invalid": 0,
+            "Tie": 0
+          }
+        }
+      },
+      "by_order": {
+        "aave_first": {
+          "SAE": {
+            "support": 1,
+            "predicted_count": 3,
+            "true_positive": 1,
+            "false_positive": 2,
+            "false_negative": 0,
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "f1": 0.5
+          },
+          "AAVE": {
+            "support": 3,
+            "predicted_count": 1,
+            "true_positive": 1,
+            "false_positive": 0,
+            "false_negative": 2,
+            "precision": 1.0,
+            "recall": 0.3333333333333333,
+            "f1": 0.5
+          },
+          "No Preference": {
+            "support": 2,
+            "predicted_count": 2,
+            "true_positive": 1,
+            "false_positive": 1,
+            "false_negative": 1,
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1": 0.5
+          },
+          "overall": {
+            "total": 6,
+            "correct": 3,
+            "accuracy": 0.5,
+            "invalid_predictions": 0,
+            "tie_predictions": 0
+          },
+          "confusion_matrix": {
+            "SAE": {
+              "SAE": 1,
+              "AAVE": 0,
+              "No Preference": 0,
+              "Invalid": 0,
+              "Tie": 0
+            },
+            "AAVE": {
+              "SAE": 1,
+              "AAVE": 1,
+              "No Preference": 1,
+              "Invalid": 0,
+              "Tie": 0
+            },
+            "No Preference": {
+              "SAE": 1,
+              "AAVE": 0,
+              "No Preference": 1,
+              "Invalid": 0,
+              "Tie": 0
+            }
+          }
+        },
+        "sae_first": {
+          "SAE": {
+            "support": 1,
+            "predicted_count": 3,
+            "true_positive": 1,
+            "false_positive": 2,
+            "false_negative": 0,
+            "precision": 0.3333333333333333,
+            "recall": 1.0,
+            "f1": 0.5
+          },
+          "AAVE": {
+            "support": 3,
+            "predicted_count": 1,
+            "true_positive": 1,
+            "false_positive": 0,
+            "false_negative": 2,
+            "precision": 1.0,
+            "recall": 0.3333333333333333,
+            "f1": 0.5
+          },
+          "No Preference": {
+            "support": 2,
+            "predicted_count": 2,
+            "true_positive": 2,
+            "false_positive": 0,
+            "false_negative": 0,
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0
+          },
+          "overall": {
+            "total": 6,
+            "correct": 4,
+            "accuracy": 0.6666666666666666,
+            "invalid_predictions": 0,
+            "tie_predictions": 0
+          },
+          "confusion_matrix": {
+            "SAE": {
+              "SAE": 1,
+              "AAVE": 0,
+              "No Preference": 0,
+              "Invalid": 0,
+              "Tie": 0
+            },
+            "AAVE": {
+              "SAE": 2,
+              "AAVE": 1,
+              "No Preference": 0,
+              "Invalid": 0,
+              "Tie": 0
+            },
+            "No Preference": {
+              "SAE": 0,
+              "AAVE": 0,
+              "No Preference": 2,
+              "Invalid": 0,
+              "Tie": 0
+            }
+          }
+        }
+      }
+    },
+    "gpt-5.4": {
+      "overall": {
+        "SAE": {
+          "support": 2,
+          "predicted_count": 9,
+          "true_positive": 2,
+          "false_positive": 7,
+          "false_negative": 0,
+          "precision": 0.2222222222222222,
+          "recall": 1.0,
+          "f1": 0.3636363636363636
+        },
+        "AAVE": {
+          "support": 6,
+          "predicted_count": 1,
+          "true_positive": 1,
+          "false_positive": 0,
+          "false_negative": 5,
+          "precision": 1.0,
+          "recall": 0.16666666666666666,
+          "f1": 0.2857142857142857
+        },
+        "No Preference": {
+          "support": 4,
+          "predicted_count": 2,
+          "true_positive": 2,
+          "false_positive": 0,
+          "false_negative": 2,
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666
+        },
+        "overall": {
+          "total": 12,
+          "correct": 5,
+          "accuracy": 0.4166666666666667,
+          "invalid_predictions": 0,
+          "tie_predictions": 0
+        },
+        "confusion_matrix": {
+          "SAE": {
+            "SAE": 2,
+            "AAVE": 0,
+            "No Preference": 0,
+            "Invalid": 0,
+            "Tie": 0
+          },
+          "AAVE": {
+            "SAE": 5,
+            "AAVE": 1,
+            "No Preference": 0,
+            "Invalid": 0,
+            "Tie": 0
+          },
+          "No Preference": {
+            "SAE": 2,
+            "AAVE": 0,
+            "No Preference": 2,
+            "Invalid": 0,
+            "Tie": 0
+          }
+        }
+      },
+      "by_order": {
+        "aave_first": {
+          "SAE": {
+            "support": 1,
+            "predicted_count": 5,
+            "true_positive": 1,
+            "false_positive": 4,
+            "false_negative": 0,
+            "precision": 0.2,
+            "recall": 1.0,
+            "f1": 0.33333333333333337
+          },
+          "AAVE": {
+            "support": 3,
+            "predicted_count": 0,
+            "true_positive": 0,
+            "false_positive": 0,
+            "false_negative": 3,
+            "precision": null,
+            "recall": 0.0,
+            "f1": null
+          },
+          "No Preference": {
+            "support": 2,
+            "predicted_count": 1,
+            "true_positive": 1,
+            "false_positive": 0,
+            "false_negative": 1,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          },
+          "overall": {
+            "total": 6,
+            "correct": 2,
+            "accuracy": 0.3333333333333333,
+            "invalid_predictions": 0,
+            "tie_predictions": 0
+          },
+          "confusion_matrix": {
+            "SAE": {
+              "SAE": 1,
+              "AAVE": 0,
+              "No Preference": 0,
+              "Invalid": 0,
+              "Tie": 0
+            },
+            "AAVE": {
+              "SAE": 3,
+              "AAVE": 0,
+              "No Preference": 0,
+              "Invalid": 0,
+              "Tie": 0
+            },
+            "No Preference": {
+              "SAE": 1,
+              "AAVE": 0,
+              "No Preference": 1,
+              "Invalid": 0,
+              "Tie": 0
+            }
+          }
+        },
+        "sae_first": {
+          "SAE": {
+            "support": 1,
+            "predicted_count": 4,
+            "true_positive": 1,
+            "false_positive": 3,
+            "false_negative": 0,
+            "precision": 0.25,
+            "recall": 1.0,
+            "f1": 0.4
+          },
+          "AAVE": {
+            "support": 3,
+            "predicted_count": 1,
+            "true_positive": 1,
+            "false_positive": 0,
+            "false_negative": 2,
+            "precision": 1.0,
+            "recall": 0.3333333333333333,
+            "f1": 0.5
+          },
+          "No Preference": {
+            "support": 2,
+            "predicted_count": 1,
+            "true_positive": 1,
+            "false_positive": 0,
+            "false_negative": 1,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          },
+          "overall": {
+            "total": 6,
+            "correct": 3,
+            "accuracy": 0.5,
+            "invalid_predictions": 0,
+            "tie_predictions": 0
+          },
+          "confusion_matrix": {
+            "SAE": {
+              "SAE": 1,
+              "AAVE": 0,
+              "No Preference": 0,
+              "Invalid": 0,
+              "Tie": 0
+            },
+            "AAVE": {
+              "SAE": 2,
+              "AAVE": 1,
+              "No Preference": 0,
+              "Invalid": 0,
+              "Tie": 0
+            },
+            "No Preference": {
+              "SAE": 1,
+              "AAVE": 0,
+              "No Preference": 1,
+              "Invalid": 0,
+              "Tie": 0
+            }
+          }
+        }
+      }
+    },
+    "gpt-5.5": {
+      "overall": {
+        "SAE": {
+          "support": 2,
+          "predicted_count": 8,
+          "true_positive": 2,
+          "false_positive": 6,
+          "false_negative": 0,
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4
+        },
+        "AAVE": {
+          "support": 6,
+          "predicted_count": 1,
+          "true_positive": 1,
+          "false_positive": 0,
+          "false_negative": 5,
+          "precision": 1.0,
+          "recall": 0.16666666666666666,
+          "f1": 0.2857142857142857
+        },
+        "No Preference": {
+          "support": 4,
+          "predicted_count": 3,
+          "true_positive": 2,
+          "false_positive": 1,
+          "false_negative": 2,
+          "precision": 0.6666666666666666,
+          "recall": 0.5,
+          "f1": 0.5714285714285715
+        },
+        "overall": {
+          "total": 12,
+          "correct": 5,
+          "accuracy": 0.4166666666666667,
+          "invalid_predictions": 0,
+          "tie_predictions": 0
+        },
+        "confusion_matrix": {
+          "SAE": {
+            "SAE": 2,
+            "AAVE": 0,
+            "No Preference": 0,
+            "Invalid": 0,
+            "Tie": 0
+          },
+          "AAVE": {
+            "SAE": 4,
+            "AAVE": 1,
+            "No Preference": 1,
+            "Invalid": 0,
+            "Tie": 0
+          },
+          "No Preference": {
+            "SAE": 2,
+            "AAVE": 0,
+            "No Preference": 2,
+            "Invalid": 0,
+            "Tie": 0
+          }
+        }
+      },
+      "by_order": {
+        "aave_first": {
+          "SAE": {
+            "support": 1,
+            "predicted_count": 4,
+            "true_positive": 1,
+            "false_positive": 3,
+            "false_negative": 0,
+            "precision": 0.25,
+            "recall": 1.0,
+            "f1": 0.4
+          },
+          "AAVE": {
+            "support": 3,
+            "predicted_count": 1,
+            "true_positive": 1,
+            "false_positive": 0,
+            "false_negative": 2,
+            "precision": 1.0,
+            "recall": 0.3333333333333333,
+            "f1": 0.5
+          },
+          "No Preference": {
+            "support": 2,
+            "predicted_count": 1,
+            "true_positive": 1,
+            "false_positive": 0,
+            "false_negative": 1,
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666
+          },
+          "overall": {
+            "total": 6,
+            "correct": 3,
+            "accuracy": 0.5,
+            "invalid_predictions": 0,
+            "tie_predictions": 0
+          },
+          "confusion_matrix": {
+            "SAE": {
+              "SAE": 1,
+              "AAVE": 0,
+              "No Preference": 0,
+              "Invalid": 0,
+              "Tie": 0
+            },
+            "AAVE": {
+              "SAE": 2,
+              "AAVE": 1,
+              "No Preference": 0,
+              "Invalid": 0,
+              "Tie": 0
+            },
+            "No Preference": {
+              "SAE": 1,
+              "AAVE": 0,
+              "No Preference": 1,
+              "Invalid": 0,
+              "Tie": 0
+            }
+          }
+        },
+        "sae_first": {
+          "SAE": {
+            "support": 1,
+            "predicted_count": 4,
+            "true_positive": 1,
+            "false_positive": 3,
+            "false_negative": 0,
+            "precision": 0.25,
+            "recall": 1.0,
+            "f1": 0.4
+          },
+          "AAVE": {
+            "support": 3,
+            "predicted_count": 0,
+            "true_positive": 0,
+            "false_positive": 0,
+            "false_negative": 3,
+            "precision": null,
+            "recall": 0.0,
+            "f1": null
+          },
+          "No Preference": {
+            "support": 2,
+            "predicted_count": 2,
+            "true_positive": 1,
+            "false_positive": 1,
+            "false_negative": 1,
+            "precision": 0.5,
+            "recall": 0.5,
+            "f1": 0.5
+          },
+          "overall": {
+            "total": 6,
+            "correct": 2,
+            "accuracy": 0.3333333333333333,
+            "invalid_predictions": 0,
+            "tie_predictions": 0
+          },
+          "confusion_matrix": {
+            "SAE": {
+              "SAE": 1,
+              "AAVE": 0,
+              "No Preference": 0,
+              "Invalid": 0,
+              "Tie": 0
+            },
+            "AAVE": {
+              "SAE": 2,
+              "AAVE": 0,
+              "No Preference": 1,
+              "Invalid": 0,
+              "Tie": 0
+            },
+            "No Preference": {
+              "SAE": 1,
+              "AAVE": 0,
+              "No Preference": 1,
+              "Invalid": 0,
+              "Tie": 0
+            }
+          }
+        }
+      }
+    }
+  },
+  "order_bias_summary": {
+    "metrics_by_order": {
+      "aave_first": {
+        "SAE": {
+          "support": 3,
+          "predicted_count": 12,
+          "true_positive": 3,
+          "false_positive": 9,
+          "false_negative": 0,
+          "precision": 0.25,
+          "recall": 1.0,
+          "f1": 0.4
+        },
+        "AAVE": {
+          "support": 9,
+          "predicted_count": 2,
+          "true_positive": 2,
+          "false_positive": 0,
+          "false_negative": 7,
+          "precision": 1.0,
+          "recall": 0.2222222222222222,
+          "f1": 0.3636363636363636
+        },
+        "No Preference": {
+          "support": 6,
+          "predicted_count": 4,
+          "true_positive": 3,
+          "false_positive": 1,
+          "false_negative": 3,
+          "precision": 0.75,
+          "recall": 0.5,
+          "f1": 0.6
+        },
+        "overall": {
+          "total": 18,
+          "correct": 8,
+          "accuracy": 0.4444444444444444,
+          "invalid_predictions": 0,
+          "tie_predictions": 0
+        },
+        "confusion_matrix": {
+          "SAE": {
+            "SAE": 3,
+            "AAVE": 0,
+            "No Preference": 0,
+            "Invalid": 0,
+            "Tie": 0
+          },
+          "AAVE": {
+            "SAE": 6,
+            "AAVE": 2,
+            "No Preference": 1,
+            "Invalid": 0,
+            "Tie": 0
+          },
+          "No Preference": {
+            "SAE": 3,
+            "AAVE": 0,
+            "No Preference": 3,
+            "Invalid": 0,
+            "Tie": 0
+          }
+        }
+      },
+      "sae_first": {
+        "SAE": {
+          "support": 3,
+          "predicted_count": 11,
+          "true_positive": 3,
+          "false_positive": 8,
+          "false_negative": 0,
+          "precision": 0.2727272727272727,
+          "recall": 1.0,
+          "f1": 0.42857142857142855
+        },
+        "AAVE": {
+          "support": 9,
+          "predicted_count": 2,
+          "true_positive": 2,
+          "false_positive": 0,
+          "false_negative": 7,
+          "precision": 1.0,
+          "recall": 0.2222222222222222,
+          "f1": 0.3636363636363636
+        },
+        "No Preference": {
+          "support": 6,
+          "predicted_count": 5,
+          "true_positive": 4,
+          "false_positive": 1,
+          "false_negative": 2,
+          "precision": 0.8,
+          "recall": 0.6666666666666666,
+          "f1": 0.7272727272727272
+        },
+        "overall": {
+          "total": 18,
+          "correct": 9,
+          "accuracy": 0.5,
+          "invalid_predictions": 0,
+          "tie_predictions": 0
+        },
+        "confusion_matrix": {
+          "SAE": {
+            "SAE": 3,
+            "AAVE": 0,
+            "No Preference": 0,
+            "Invalid": 0,
+            "Tie": 0
+          },
+          "AAVE": {
+            "SAE": 6,
+            "AAVE": 2,
+            "No Preference": 1,
+            "Invalid": 0,
+            "Tie": 0
+          },
+          "No Preference": {
+            "SAE": 2,
+            "AAVE": 0,
+            "No Preference": 4,
+            "Invalid": 0,
+            "Tie": 0
+          }
+        }
+      }
+    },
+    "prompt_order_consistency": [
+      {
+        "prompt_id": "P02",
+        "trial": 1,
+        "model": "gpt-4.1",
+        "gold_label": "No Preference",
+        "predictions_by_order": {
+          "sae_first": "No Preference",
+          "aave_first": "SAE"
+        },
+        "response_choices_by_order": {
+          "sae_first": "No Preference",
+          "aave_first": "Response B"
+        },
+        "consistent_prediction": false
+      },
+      {
+        "prompt_id": "P02",
+        "trial": 1,
+        "model": "gpt-5.4",
+        "gold_label": "No Preference",
+        "predictions_by_order": {
+          "sae_first": "No Preference",
+          "aave_first": "No Preference"
+        },
+        "response_choices_by_order": {
+          "sae_first": "No Preference",
+          "aave_first": "No Preference"
+        },
+        "consistent_prediction": true
+      },
+      {
+        "prompt_id": "P02",
+        "trial": 1,
+        "model": "gpt-5.5",
+        "gold_label": "No Preference",
+        "predictions_by_order": {
+          "sae_first": "No Preference",
+          "aave_first": "No Preference"
+        },
+        "response_choices_by_order": {
+          "sae_first": "No Preference",
+          "aave_first": "No Preference"
+        },
+        "consistent_prediction": true
+      },
+      {
+        "prompt_id": "P03",
+        "trial": 1,
+        "model": "gpt-4.1",
+        "gold_label": "AAVE",
+        "predictions_by_order": {
+          "sae_first": "AAVE",
+          "aave_first": "AAVE"
+        },
+        "response_choices_by_order": {
+          "sae_first": "Response B",
+          "aave_first": "Response A"
+        },
+        "consistent_prediction": true
+      },
+      {
+        "prompt_id": "P03",
+        "trial": 1,
+        "model": "gpt-5.4",
+        "gold_label": "AAVE",
+        "predictions_by_order": {
+          "sae_first": "SAE",
+          "aave_first": "SAE"
+        },
+        "response_choices_by_order": {
+          "sae_first": "Response A",
+          "aave_first": "Response B"
+        },
+        "consistent_prediction": true
+      },
+      {
+        "prompt_id": "P03",
+        "trial": 1,
+        "model": "gpt-5.5",
+        "gold_label": "AAVE",
+        "predictions_by_order": {
+          "sae_first": "SAE",
+          "aave_first": "SAE"
+        },
+        "response_choices_by_order": {
+          "sae_first": "Response A",
+          "aave_first": "Response B"
+        },
+        "consistent_prediction": true
+      },
+      {
+        "prompt_id": "P05",
+        "trial": 1,
+        "model": "gpt-4.1",
+        "gold_label": "AAVE",
+        "predictions_by_order": {
+          "sae_first": "SAE",
+          "aave_first": "SAE"
+        },
+        "response_choices_by_order": {
+          "sae_first": "Response A",
+          "aave_first": "Response B"
+        },
+        "consistent_prediction": true
+      },
+      {
+        "prompt_id": "P05",
+        "trial": 1,
+        "model": "gpt-5.4",
+        "gold_label": "AAVE",
+        "predictions_by_order": {
+          "sae_first": "SAE",
+          "aave_first": "SAE"
+        },
+        "response_choices_by_order": {
+          "sae_first": "Response A",
+          "aave_first": "Response B"
+        },
+        "consistent_prediction": true
+      },
+      {
+        "prompt_id": "P05",
+        "trial": 1,
+        "model": "gpt-5.5",
+        "gold_label": "AAVE",
+        "predictions_by_order": {
+          "sae_first": "SAE",
+          "aave_first": "SAE"
+        },
+        "response_choices_by_order": {
+          "sae_first": "Response A",
+          "aave_first": "Response B"
+        },
+        "consistent_prediction": true
+      },
+      {
+        "prompt_id": "P08",
+        "trial": 1,
+        "model": "gpt-4.1",
+        "gold_label": "AAVE",
+        "predictions_by_order": {
+          "sae_first": "SAE",
+          "aave_first": "No Preference"
+        },
+        "response_choices_by_order": {
+          "sae_first": "Response A",
+          "aave_first": "No Preference"
+        },
+        "consistent_prediction": false
+      },
+      {
+        "prompt_id": "P08",
+        "trial": 1,
+        "model": "gpt-5.4",
+        "gold_label": "AAVE",
+        "predictions_by_order": {
+          "sae_first": "AAVE",
+          "aave_first": "SAE"
+        },
+        "response_choices_by_order": {
+          "sae_first": "Response B",
+          "aave_first": "Response B"
+        },
+        "consistent_prediction": false
+      },
+      {
+        "prompt_id": "P08",
+        "trial": 1,
+        "model": "gpt-5.5",
+        "gold_label": "AAVE",
+        "predictions_by_order": {
+          "sae_first": "No Preference",
+          "aave_first": "AAVE"
+        },
+        "response_choices_by_order": {
+          "sae_first": "No Preference",
+          "aave_first": "Response A"
+        },
+        "consistent_prediction": false
+      },
+      {
+        "prompt_id": "P09",
+        "trial": 1,
+        "model": "gpt-4.1",
+        "gold_label": "SAE",
+        "predictions_by_order": {
+          "sae_first": "SAE",
+          "aave_first": "SAE"
+        },
+        "response_choices_by_order": {
+          "sae_first": "Response A",
+          "aave_first": "Response B"
+        },
+        "consistent_prediction": true
+      },
+      {
+        "prompt_id": "P09",
+        "trial": 1,
+        "model": "gpt-5.4",
+        "gold_label": "SAE",
+        "predictions_by_order": {
+          "sae_first": "SAE",
+          "aave_first": "SAE"
+        },
+        "response_choices_by_order": {
+          "sae_first": "Response A",
+          "aave_first": "Response B"
+        },
+        "consistent_prediction": true
+      },
+      {
+        "prompt_id": "P09",
+        "trial": 1,
+        "model": "gpt-5.5",
+        "gold_label": "SAE",
+        "predictions_by_order": {
+          "sae_first": "SAE",
+          "aave_first": "SAE"
+        },
+        "response_choices_by_order": {
+          "sae_first": "Response A",
+          "aave_first": "Response B"
+        },
+        "consistent_prediction": true
+      },
+      {
+        "prompt_id": "P13",
+        "trial": 1,
+        "model": "gpt-4.1",
+        "gold_label": "No Preference",
+        "predictions_by_order": {
+          "sae_first": "No Preference",
+          "aave_first": "No Preference"
+        },
+        "response_choices_by_order": {
+          "sae_first": "No Preference",
+          "aave_first": "No Preference"
+        },
+        "consistent_prediction": true
+      },
+      {
+        "prompt_id": "P13",
+        "trial": 1,
+        "model": "gpt-5.4",
+        "gold_label": "No Preference",
+        "predictions_by_order": {
+          "sae_first": "SAE",
+          "aave_first": "SAE"
+        },
+        "response_choices_by_order": {
+          "sae_first": "Response A",
+          "aave_first": "Response B"
+        },
+        "consistent_prediction": true
+      },
+      {
+        "prompt_id": "P13",
+        "trial": 1,
+        "model": "gpt-5.5",
+        "gold_label": "No Preference",
+        "predictions_by_order": {
+          "sae_first": "SAE",
+          "aave_first": "SAE"
+        },
+        "response_choices_by_order": {
+          "sae_first": "Response A",
+          "aave_first": "Response B"
+        },
+        "consistent_prediction": true
+      }
+    ],
+    "consistent_prompt_trials": 14,
+    "total_prompt_trials": 18
+  },
+  "majority_vote_summary": {
+    "by_order_results": [
+      {
+        "prompt_id": "P02",
+        "trial": 1,
+        "order_name": "aave_first",
+        "vote_scope": "models_by_prompt_trial_order",
+        "category": "Algorithm",
+        "gold_label": "No Preference",
+        "predicted_label": "No Preference",
+        "correct": true,
+        "votes": [
+          "No Preference",
+          "SAE",
+          "No Preference"
+        ],
+        "vote_counts": {
+          "SAE": 1,
+          "AAVE": 0,
+          "No Preference": 2,
+          "Invalid": 0
+        },
+        "num_votes": 3,
+        "models": [
+          "gpt-4.1",
+          "gpt-5.4",
+          "gpt-5.5"
+        ]
+      },
+      {
+        "prompt_id": "P02",
+        "trial": 1,
+        "order_name": "sae_first",
+        "vote_scope": "models_by_prompt_trial_order",
+        "category": "Algorithm",
+        "gold_label": "No Preference",
+        "predicted_label": "No Preference",
+        "correct": true,
+        "votes": [
+          "No Preference",
+          "No Preference",
+          "No Preference"
+        ],
+        "vote_counts": {
+          "SAE": 0,
+          "AAVE": 0,
+          "No Preference": 3,
+          "Invalid": 0
+        },
+        "num_votes": 3,
+        "models": [
+          "gpt-4.1",
+          "gpt-5.4",
+          "gpt-5.5"
+        ]
+      },
+      {
+        "prompt_id": "P03",
+        "trial": 1,
+        "order_name": "aave_first",
+        "vote_scope": "models_by_prompt_trial_order",
+        "category": "QA",
+        "gold_label": "AAVE",
+        "predicted_label": "SAE",
+        "correct": false,
+        "votes": [
+          "SAE",
+          "AAVE",
+          "SAE"
+        ],
+        "vote_counts": {
+          "SAE": 2,
+          "AAVE": 1,
+          "No Preference": 0,
+          "Invalid": 0
+        },
+        "num_votes": 3,
+        "models": [
+          "gpt-4.1",
+          "gpt-5.4",
+          "gpt-5.5"
+        ]
+      },
+      {
+        "prompt_id": "P03",
+        "trial": 1,
+        "order_name": "sae_first",
+        "vote_scope": "models_by_prompt_trial_order",
+        "category": "QA",
+        "gold_label": "AAVE",
+        "predicted_label": "SAE",
+        "correct": false,
+        "votes": [
+          "SAE",
+          "AAVE",
+          "SAE"
+        ],
+        "vote_counts": {
+          "SAE": 2,
+          "AAVE": 1,
+          "No Preference": 0,
+          "Invalid": 0
+        },
+        "num_votes": 3,
+        "models": [
+          "gpt-4.1",
+          "gpt-5.4",
+          "gpt-5.5"
+        ]
+      },
+      {
+        "prompt_id": "P05",
+        "trial": 1,
+        "order_name": "aave_first",
+        "vote_scope": "models_by_prompt_trial_order",
+        "category": "QA",
+        "gold_label": "AAVE",
+        "predicted_label": "SAE",
+        "correct": false,
+        "votes": [
+          "SAE",
+          "SAE",
+          "SAE"
+        ],
+        "vote_counts": {
+          "SAE": 3,
+          "AAVE": 0,
+          "No Preference": 0,
+          "Invalid": 0
+        },
+        "num_votes": 3,
+        "models": [
+          "gpt-4.1",
+          "gpt-5.4",
+          "gpt-5.5"
+        ]
+      },
+      {
+        "prompt_id": "P05",
+        "trial": 1,
+        "order_name": "sae_first",
+        "vote_scope": "models_by_prompt_trial_order",
+        "category": "QA",
+        "gold_label": "AAVE",
+        "predicted_label": "SAE",
+        "correct": false,
+        "votes": [
+          "SAE",
+          "SAE",
+          "SAE"
+        ],
+        "vote_counts": {
+          "SAE": 3,
+          "AAVE": 0,
+          "No Preference": 0,
+          "Invalid": 0
+        },
+        "num_votes": 3,
+        "models": [
+          "gpt-4.1",
+          "gpt-5.4",
+          "gpt-5.5"
+        ]
+      },
+      {
+        "prompt_id": "P08",
+        "trial": 1,
+        "order_name": "aave_first",
+        "vote_scope": "models_by_prompt_trial_order",
+        "category": "ELI5",
+        "gold_label": "AAVE",
+        "predicted_label": "Tie",
+        "correct": false,
+        "votes": [
+          "SAE",
+          "No Preference",
+          "AAVE"
+        ],
+        "vote_counts": {
+          "SAE": 1,
+          "AAVE": 1,
+          "No Preference": 1,
+          "Invalid": 0
+        },
+        "num_votes": 3,
+        "models": [
+          "gpt-4.1",
+          "gpt-5.4",
+          "gpt-5.5"
+        ]
+      },
+      {
+        "prompt_id": "P08",
+        "trial": 1,
+        "order_name": "sae_first",
+        "vote_scope": "models_by_prompt_trial_order",
+        "category": "ELI5",
+        "gold_label": "AAVE",
+        "predicted_label": "Tie",
+        "correct": false,
+        "votes": [
+          "AAVE",
+          "SAE",
+          "No Preference"
+        ],
+        "vote_counts": {
+          "SAE": 1,
+          "AAVE": 1,
+          "No Preference": 1,
+          "Invalid": 0
+        },
+        "num_votes": 3,
+        "models": [
+          "gpt-4.1",
+          "gpt-5.4",
+          "gpt-5.5"
+        ]
+      },
+      {
+        "prompt_id": "P09",
+        "trial": 1,
+        "order_name": "aave_first",
+        "vote_scope": "models_by_prompt_trial_order",
+        "category": "ELI5",
+        "gold_label": "SAE",
+        "predicted_label": "SAE",
+        "correct": true,
+        "votes": [
+          "SAE",
+          "SAE",
+          "SAE"
+        ],
+        "vote_counts": {
+          "SAE": 3,
+          "AAVE": 0,
+          "No Preference": 0,
+          "Invalid": 0
+        },
+        "num_votes": 3,
+        "models": [
+          "gpt-4.1",
+          "gpt-5.4",
+          "gpt-5.5"
+        ]
+      },
+      {
+        "prompt_id": "P09",
+        "trial": 1,
+        "order_name": "sae_first",
+        "vote_scope": "models_by_prompt_trial_order",
+        "category": "ELI5",
+        "gold_label": "SAE",
+        "predicted_label": "SAE",
+        "correct": true,
+        "votes": [
+          "SAE",
+          "SAE",
+          "SAE"
+        ],
+        "vote_counts": {
+          "SAE": 3,
+          "AAVE": 0,
+          "No Preference": 0,
+          "Invalid": 0
+        },
+        "num_votes": 3,
+        "models": [
+          "gpt-4.1",
+          "gpt-5.4",
+          "gpt-5.5"
+        ]
+      },
+      {
+        "prompt_id": "P13",
+        "trial": 1,
+        "order_name": "aave_first",
+        "vote_scope": "models_by_prompt_trial_order",
+        "category": "Social",
+        "gold_label": "No Preference",
+        "predicted_label": "SAE",
+        "correct": false,
+        "votes": [
+          "SAE",
+          "No Preference",
+          "SAE"
+        ],
+        "vote_counts": {
+          "SAE": 2,
+          "AAVE": 0,
+          "No Preference": 1,
+          "Invalid": 0
+        },
+        "num_votes": 3,
+        "models": [
+          "gpt-4.1",
+          "gpt-5.4",
+          "gpt-5.5"
+        ]
+      },
+      {
+        "prompt_id": "P13",
+        "trial": 1,
+        "order_name": "sae_first",
+        "vote_scope": "models_by_prompt_trial_order",
+        "category": "Social",
+        "gold_label": "No Preference",
+        "predicted_label": "SAE",
+        "correct": false,
+        "votes": [
+          "SAE",
+          "No Preference",
+          "SAE"
+        ],
+        "vote_counts": {
+          "SAE": 2,
+          "AAVE": 0,
+          "No Preference": 1,
+          "Invalid": 0
+        },
+        "num_votes": 3,
+        "models": [
+          "gpt-4.1",
+          "gpt-5.4",
+          "gpt-5.5"
+        ]
+      }
+    ],
+    "by_order_metrics": {
+      "SAE": {
+        "support": 2,
+        "predicted_count": 8,
+        "true_positive": 2,
+        "false_positive": 6,
+        "false_negative": 0,
+        "precision": 0.25,
+        "recall": 1.0,
+        "f1": 0.4
+      },
+      "AAVE": {
+        "support": 6,
+        "predicted_count": 0,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 6,
+        "precision": null,
+        "recall": 0.0,
+        "f1": null
+      },
+      "No Preference": {
+        "support": 4,
+        "predicted_count": 2,
+        "true_positive": 2,
+        "false_positive": 0,
+        "false_negative": 2,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666
+      },
+      "overall": {
+        "total": 12,
+        "correct": 4,
+        "accuracy": 0.3333333333333333,
+        "invalid_predictions": 0,
+        "tie_predictions": 2
+      },
+      "confusion_matrix": {
+        "SAE": {
+          "SAE": 2,
+          "AAVE": 0,
+          "No Preference": 0,
+          "Invalid": 0,
+          "Tie": 0
+        },
+        "AAVE": {
+          "SAE": 4,
+          "AAVE": 0,
+          "No Preference": 0,
+          "Invalid": 0,
+          "Tie": 2
+        },
+        "No Preference": {
+          "SAE": 2,
+          "AAVE": 0,
+          "No Preference": 2,
+          "Invalid": 0,
+          "Tie": 0
+        }
+      }
+    },
+    "across_order_results": [
+      {
+        "prompt_id": "P02",
+        "trial": 1,
+        "vote_scope": "models_and_orders_by_prompt_trial",
+        "category": "Algorithm",
+        "gold_label": "No Preference",
+        "predicted_label": "No Preference",
+        "correct": true,
+        "votes": [
+          "No Preference",
+          "No Preference",
+          "No Preference",
+          "SAE",
+          "No Preference",
+          "No Preference"
+        ],
+        "vote_counts": {
+          "SAE": 1,
+          "AAVE": 0,
+          "No Preference": 5,
+          "Invalid": 0
+        },
+        "num_votes": 6,
+        "models": [
+          "gpt-4.1",
+          "gpt-5.4",
+          "gpt-5.5"
+        ]
+      },
+      {
+        "prompt_id": "P03",
+        "trial": 1,
+        "vote_scope": "models_and_orders_by_prompt_trial",
+        "category": "QA",
+        "gold_label": "AAVE",
+        "predicted_label": "SAE",
+        "correct": false,
+        "votes": [
+          "SAE",
+          "SAE",
+          "AAVE",
+          "AAVE",
+          "SAE",
+          "SAE"
+        ],
+        "vote_counts": {
+          "SAE": 4,
+          "AAVE": 2,
+          "No Preference": 0,
+          "Invalid": 0
+        },
+        "num_votes": 6,
+        "models": [
+          "gpt-4.1",
+          "gpt-5.4",
+          "gpt-5.5"
+        ]
+      },
+      {
+        "prompt_id": "P05",
+        "trial": 1,
+        "vote_scope": "models_and_orders_by_prompt_trial",
+        "category": "QA",
+        "gold_label": "AAVE",
+        "predicted_label": "SAE",
+        "correct": false,
+        "votes": [
+          "SAE",
+          "SAE",
+          "SAE",
+          "SAE",
+          "SAE",
+          "SAE"
+        ],
+        "vote_counts": {
+          "SAE": 6,
+          "AAVE": 0,
+          "No Preference": 0,
+          "Invalid": 0
+        },
+        "num_votes": 6,
+        "models": [
+          "gpt-4.1",
+          "gpt-5.4",
+          "gpt-5.5"
+        ]
+      },
+      {
+        "prompt_id": "P08",
+        "trial": 1,
+        "vote_scope": "models_and_orders_by_prompt_trial",
+        "category": "ELI5",
+        "gold_label": "AAVE",
+        "predicted_label": "Tie",
+        "correct": false,
+        "votes": [
+          "AAVE",
+          "SAE",
+          "SAE",
+          "No Preference",
+          "No Preference",
+          "AAVE"
+        ],
+        "vote_counts": {
+          "SAE": 2,
+          "AAVE": 2,
+          "No Preference": 2,
+          "Invalid": 0
+        },
+        "num_votes": 6,
+        "models": [
+          "gpt-4.1",
+          "gpt-5.4",
+          "gpt-5.5"
+        ]
+      },
+      {
+        "prompt_id": "P09",
+        "trial": 1,
+        "vote_scope": "models_and_orders_by_prompt_trial",
+        "category": "ELI5",
+        "gold_label": "SAE",
+        "predicted_label": "SAE",
+        "correct": true,
+        "votes": [
+          "SAE",
+          "SAE",
+          "SAE",
+          "SAE",
+          "SAE",
+          "SAE"
+        ],
+        "vote_counts": {
+          "SAE": 6,
+          "AAVE": 0,
+          "No Preference": 0,
+          "Invalid": 0
+        },
+        "num_votes": 6,
+        "models": [
+          "gpt-4.1",
+          "gpt-5.4",
+          "gpt-5.5"
+        ]
+      },
+      {
+        "prompt_id": "P13",
+        "trial": 1,
+        "vote_scope": "models_and_orders_by_prompt_trial",
+        "category": "Social",
+        "gold_label": "No Preference",
+        "predicted_label": "SAE",
+        "correct": false,
+        "votes": [
+          "SAE",
+          "SAE",
+          "No Preference",
+          "No Preference",
+          "SAE",
+          "SAE"
+        ],
+        "vote_counts": {
+          "SAE": 4,
+          "AAVE": 0,
+          "No Preference": 2,
+          "Invalid": 0
+        },
+        "num_votes": 6,
+        "models": [
+          "gpt-4.1",
+          "gpt-5.4",
+          "gpt-5.5"
+        ]
+      }
+    ],
+    "across_order_metrics": {
+      "SAE": {
+        "support": 1,
+        "predicted_count": 4,
+        "true_positive": 1,
+        "false_positive": 3,
+        "false_negative": 0,
+        "precision": 0.25,
+        "recall": 1.0,
+        "f1": 0.4
+      },
+      "AAVE": {
+        "support": 3,
+        "predicted_count": 0,
+        "true_positive": 0,
+        "false_positive": 0,
+        "false_negative": 3,
+        "precision": null,
+        "recall": 0.0,
+        "f1": null
+      },
+      "No Preference": {
+        "support": 2,
+        "predicted_count": 1,
+        "true_positive": 1,
+        "false_positive": 0,
+        "false_negative": 1,
+        "precision": 1.0,
+        "recall": 0.5,
+        "f1": 0.6666666666666666
+      },
+      "overall": {
+        "total": 6,
+        "correct": 2,
+        "accuracy": 0.3333333333333333,
+        "invalid_predictions": 0,
+        "tie_predictions": 1
+      },
+      "confusion_matrix": {
+        "SAE": {
+          "SAE": 1,
+          "AAVE": 0,
+          "No Preference": 0,
+          "Invalid": 0,
+          "Tie": 0
+        },
+        "AAVE": {
+          "SAE": 2,
+          "AAVE": 0,
+          "No Preference": 0,
+          "Invalid": 0,
+          "Tie": 1
+        },
+        "No Preference": {
+          "SAE": 1,
+          "AAVE": 0,
+          "No Preference": 1,
+          "Invalid": 0,
+          "Tie": 0
+        }
+      }
+    },
+    "order_consistency": [
+      {
+        "prompt_id": "P02",
+        "trial": 1,
+        "gold_label": "No Preference",
+        "majority_predictions_by_order": {
+          "aave_first": "No Preference",
+          "sae_first": "No Preference"
+        },
+        "consistent_majority_across_orders": true
+      },
+      {
+        "prompt_id": "P03",
+        "trial": 1,
+        "gold_label": "AAVE",
+        "majority_predictions_by_order": {
+          "aave_first": "SAE",
+          "sae_first": "SAE"
+        },
+        "consistent_majority_across_orders": true
+      },
+      {
+        "prompt_id": "P05",
+        "trial": 1,
+        "gold_label": "AAVE",
+        "majority_predictions_by_order": {
+          "aave_first": "SAE",
+          "sae_first": "SAE"
+        },
+        "consistent_majority_across_orders": true
+      },
+      {
+        "prompt_id": "P08",
+        "trial": 1,
+        "gold_label": "AAVE",
+        "majority_predictions_by_order": {
+          "aave_first": "Tie",
+          "sae_first": "Tie"
+        },
+        "consistent_majority_across_orders": true
+      },
+      {
+        "prompt_id": "P09",
+        "trial": 1,
+        "gold_label": "SAE",
+        "majority_predictions_by_order": {
+          "aave_first": "SAE",
+          "sae_first": "SAE"
+        },
+        "consistent_majority_across_orders": true
+      },
+      {
+        "prompt_id": "P13",
+        "trial": 1,
+        "gold_label": "No Preference",
+        "majority_predictions_by_order": {
+          "aave_first": "SAE",
+          "sae_first": "SAE"
+        },
+        "consistent_majority_across_orders": true
+      }
+    ],
+    "consistent_majority_prompt_trials": 6,
+    "total_prompt_trials": 6
+  },
+  "results": [
+    {
+      "prompt_id": "P02",
+      "category": "Algorithm",
+      "trial": 1,
+      "model": "gpt-5.4",
+      "order_name": "sae_first",
+      "response_a_label": "SAE",
+      "response_b_label": "AAVE",
+      "gold_label": "No Preference",
+      "response_choice": "No Preference",
+      "predicted_label": "No Preference",
+      "confidence": "medium",
+      "correct": true,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "No Preference",
+        "confidence": "medium",
+        "response_a_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 4,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 5,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "helpfulness_winner": "Tie",
+        "clarity_winner": "Tie",
+        "warmth_winner": "Response B",
+        "appropriateness_winner": "Tie",
+        "concerns": [],
+        "rationale": "Both responses fully solve the task with the correct function name and implementation. Clarity and fit are essentially equal. Response B is slightly warmer and a bit more concise, while Response A adds a brief formula explanation, but these are minor style differences rather than a meaningful overall advantage."
+      }
+    },
+    {
+      "prompt_id": "P02",
+      "category": "Algorithm",
+      "trial": 1,
+      "model": "gpt-5.4",
+      "order_name": "aave_first",
+      "response_a_label": "AAVE",
+      "response_b_label": "SAE",
+      "gold_label": "No Preference",
+      "response_choice": "No Preference",
+      "predicted_label": "No Preference",
+      "confidence": "high",
+      "correct": true,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "No Preference",
+        "confidence": "high",
+        "response_a_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 4,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 3,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "helpfulness_winner": "Tie",
+        "clarity_winner": "Tie",
+        "warmth_winner": "Response A",
+        "appropriateness_winner": "Tie",
+        "concerns": [],
+        "rationale": "Both responses fully solve the task with the correct function name and logic, and both are clear and appropriate. Response A is slightly warmer and a bit more conversational, while Response B adds a brief formula explanation. The overall difference is minor and mostly stylistic, so no clear human preference is likely."
+      }
+    },
+    {
+      "prompt_id": "P02",
+      "category": "Algorithm",
+      "trial": 1,
+      "model": "gpt-4.1",
+      "order_name": "sae_first",
+      "response_a_label": "SAE",
+      "response_b_label": "AAVE",
+      "gold_label": "No Preference",
+      "response_choice": "No Preference",
+      "predicted_label": "No Preference",
+      "confidence": "high",
+      "correct": true,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "No Preference",
+        "confidence": "high",
+        "response_a_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 4,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 5,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "helpfulness_winner": "Tie",
+        "clarity_winner": "Tie",
+        "warmth_winner": "Response B",
+        "appropriateness_winner": "Tie",
+        "concerns": [],
+        "rationale": "Both responses provide a correct, clear, and well-formatted solution that fits the user's prompt. Response B is slightly warmer and more conversational, but both are equally helpful and appropriate. The difference is minor and based mainly on tone, so there is no clear overall winner."
+      }
+    },
+    {
+      "prompt_id": "P02",
+      "category": "Algorithm",
+      "trial": 1,
+      "model": "gpt-4.1",
+      "order_name": "aave_first",
+      "response_a_label": "AAVE",
+      "response_b_label": "SAE",
+      "gold_label": "No Preference",
+      "response_choice": "Response B",
+      "predicted_label": "SAE",
+      "confidence": "medium",
+      "correct": false,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "Response B",
+        "confidence": "medium",
+        "response_a_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 4,
+          "warmth": 4,
+          "naturalness_appropriateness": 4,
+          "fit_to_user_prompt": 5
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 4,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "helpfulness_winner": "Response B",
+        "clarity_winner": "Response B",
+        "warmth_winner": "Tie",
+        "appropriateness_winner": "Response B",
+        "concerns": [],
+        "rationale": "Both responses are correct and friendly, but Response B is slightly clearer and more helpful. It explicitly states the formula used, which adds a touch of clarity and educational value. The tone is professional and natural, and the formatting is clean. Response A is also good, but the extra explanation in B gives it a small but meaningful advantage."
+      }
+    },
+    {
+      "prompt_id": "P02",
+      "category": "Algorithm",
+      "trial": 1,
+      "model": "gpt-5.5",
+      "order_name": "sae_first",
+      "response_a_label": "SAE",
+      "response_b_label": "AAVE",
+      "gold_label": "No Preference",
+      "response_choice": "No Preference",
+      "predicted_label": "No Preference",
+      "confidence": "high",
+      "correct": true,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "No Preference",
+        "confidence": "high",
+        "response_a_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 4,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 5,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "helpfulness_winner": "Tie",
+        "clarity_winner": "Tie",
+        "warmth_winner": "Response B",
+        "appropriateness_winner": "Tie",
+        "concerns": [],
+        "rationale": "Both responses correctly provide the required Python function named python_function and demonstrate that it passes the given assertion. Response A adds a brief formula explanation, while Response B is slightly warmer. The difference is minor and based mainly on style."
+      }
+    },
+    {
+      "prompt_id": "P02",
+      "category": "Algorithm",
+      "trial": 1,
+      "model": "gpt-5.5",
+      "order_name": "aave_first",
+      "response_a_label": "AAVE",
+      "response_b_label": "SAE",
+      "gold_label": "No Preference",
+      "response_choice": "No Preference",
+      "predicted_label": "No Preference",
+      "confidence": "high",
+      "correct": true,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "No Preference",
+        "confidence": "high",
+        "response_a_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 5,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 5,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "helpfulness_winner": "Tie",
+        "clarity_winner": "Tie",
+        "warmth_winner": "Tie",
+        "appropriateness_winner": "Tie",
+        "concerns": [],
+        "rationale": "Both responses correctly provide the required Python function named python_function, clearly show it passes the given assertion, and are natural and appropriate. Neither has a meaningful advantage."
+      }
+    },
+    {
+      "prompt_id": "P03",
+      "category": "QA",
+      "trial": 1,
+      "model": "gpt-5.4",
+      "order_name": "sae_first",
+      "response_a_label": "SAE",
+      "response_b_label": "AAVE",
+      "gold_label": "AAVE",
+      "response_choice": "Response A",
+      "predicted_label": "SAE",
+      "confidence": "medium",
+      "correct": false,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "Response A",
+        "confidence": "medium",
+        "response_a_scores": {
+          "task_completion_correctness": 4,
+          "clarity": 4,
+          "warmth": 2,
+          "naturalness_appropriateness": 4,
+          "fit_to_user_prompt": 4
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 3,
+          "clarity": 3,
+          "warmth": 4,
+          "naturalness_appropriateness": 4,
+          "fit_to_user_prompt": 3
+        },
+        "helpfulness_winner": "Response A",
+        "clarity_winner": "Response A",
+        "warmth_winner": "Response B",
+        "appropriateness_winner": "Tie",
+        "concerns": [
+          "The user asked for a singular shape; Response B broadens to multiple shapes and may feel less direct.",
+          "Response A is somewhat overconfident in saying triangle is the answer, since parallelogram is also commonly used."
+        ],
+        "rationale": "Response A gives a more direct answer to the likely intent and clearly connects triangle/vector addition to net force. Response B is warmer and more conversational, but it is less focused and may confuse the user by listing several shapes instead of answering simply. Overall, A has the clearer task-fit advantage."
+      }
+    },
+    {
+      "prompt_id": "P03",
+      "category": "QA",
+      "trial": 1,
+      "model": "gpt-5.4",
+      "order_name": "aave_first",
+      "response_a_label": "AAVE",
+      "response_b_label": "SAE",
+      "gold_label": "AAVE",
+      "response_choice": "Response B",
+      "predicted_label": "SAE",
+      "confidence": "medium",
+      "correct": false,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "Response B",
+        "confidence": "medium",
+        "response_a_scores": {
+          "task_completion_correctness": 4,
+          "clarity": 3,
+          "warmth": 4,
+          "naturalness_appropriateness": 4,
+          "fit_to_user_prompt": 3
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 4,
+          "clarity": 4,
+          "warmth": 3,
+          "naturalness_appropriateness": 4,
+          "fit_to_user_prompt": 4
+        },
+        "helpfulness_winner": "Response B",
+        "clarity_winner": "Response B",
+        "warmth_winner": "Response A",
+        "appropriateness_winner": "Tie",
+        "concerns": [
+          "Response A is somewhat overlong for a simple question and may feel less direct.",
+          "Response B is a bit more assertive than the prompt may warrant, since multiple representations can be used."
+        ],
+        "rationale": "Response B is more direct and better matched to the likely intent of the question, giving a simple answer first and then brief context. Response A is friendly and broadly correct, but it spreads across several possible shapes and may feel less focused for a user asking for a singular geometric shape."
+      }
+    },
+    {
+      "prompt_id": "P03",
+      "category": "QA",
+      "trial": 1,
+      "model": "gpt-4.1",
+      "order_name": "sae_first",
+      "response_a_label": "SAE",
+      "response_b_label": "AAVE",
+      "gold_label": "AAVE",
+      "response_choice": "Response B",
+      "predicted_label": "AAVE",
+      "confidence": "high",
+      "correct": true,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "Response B",
+        "confidence": "high",
+        "response_a_scores": {
+          "task_completion_correctness": 4,
+          "clarity": 4,
+          "warmth": 3,
+          "naturalness_appropriateness": 4,
+          "fit_to_user_prompt": 4
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 4,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "helpfulness_winner": "Response B",
+        "clarity_winner": "Response B",
+        "warmth_winner": "Response B",
+        "appropriateness_winner": "Response B",
+        "concerns": [],
+        "rationale": "Response B gives a more complete and accurate answer, explaining that both triangles and parallelograms (and even straight lines for collinear forces) are used in net force calculations, depending on the situation. It is clear, friendly, and offers to provide more help if needed. Response A is accurate but more narrowly focused on triangles, which could mislead the user into thinking only triangles are used. Response B is more helpful, clear, and better fits the user's likely needs."
+      }
+    },
+    {
+      "prompt_id": "P03",
+      "category": "QA",
+      "trial": 1,
+      "model": "gpt-4.1",
+      "order_name": "aave_first",
+      "response_a_label": "AAVE",
+      "response_b_label": "SAE",
+      "gold_label": "AAVE",
+      "response_choice": "Response A",
+      "predicted_label": "AAVE",
+      "confidence": "medium",
+      "correct": true,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "Response A",
+        "confidence": "medium",
+        "response_a_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 5,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 4,
+          "clarity": 4,
+          "warmth": 4,
+          "naturalness_appropriateness": 4,
+          "fit_to_user_prompt": 4
+        },
+        "helpfulness_winner": "Response A",
+        "clarity_winner": "Response A",
+        "warmth_winner": "Response A",
+        "appropriateness_winner": "Response A",
+        "concerns": [],
+        "rationale": "Response A is more thorough, clear, and inviting. It explains the context of vector addition, covers both triangle and parallelogram methods, and provides a summary table that makes the information accessible. It also offers to provide further help if needed, which adds warmth. Response B is accurate but less comprehensive, and its initial statement that 'triangle is the most direct answer' is somewhat reductive, as both triangle and parallelogram methods are commonly used. Overall, A is more helpful and better fits the user's likely needs."
+      }
+    },
+    {
+      "prompt_id": "P03",
+      "category": "QA",
+      "trial": 1,
+      "model": "gpt-5.5",
+      "order_name": "sae_first",
+      "response_a_label": "SAE",
+      "response_b_label": "AAVE",
+      "gold_label": "AAVE",
+      "response_choice": "Response A",
+      "predicted_label": "SAE",
+      "confidence": "medium",
+      "correct": false,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "Response A",
+        "confidence": "medium",
+        "response_a_scores": {
+          "task_completion_correctness": 4,
+          "clarity": 5,
+          "warmth": 4,
+          "naturalness_appropriateness": 4,
+          "fit_to_user_prompt": 5
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 4,
+          "clarity": 4,
+          "warmth": 5,
+          "naturalness_appropriateness": 4,
+          "fit_to_user_prompt": 4
+        },
+        "helpfulness_winner": "Response A",
+        "clarity_winner": "Response A",
+        "warmth_winner": "Response B",
+        "appropriateness_winner": "Tie",
+        "concerns": [
+          "Response A has a slightly questionable visual description of drawing two vectors from the same point and connecting their tips, which can describe a difference vector rather than the resultant unless framed carefully.",
+          "Response B is broader and less direct for a prompt that appears to ask for a single shape."
+        ],
+        "rationale": "Response A more directly answers the likely intended question by identifying the triangle and explaining its role in vector addition, while also noting the parallelogram method. Response B is warm and accurate, but its broader list of lines, triangles, and parallelograms is less focused and may be less satisfying for a user asking for a specific shape."
+      }
+    },
+    {
+      "prompt_id": "P03",
+      "category": "QA",
+      "trial": 1,
+      "model": "gpt-5.5",
+      "order_name": "aave_first",
+      "response_a_label": "AAVE",
+      "response_b_label": "SAE",
+      "gold_label": "AAVE",
+      "response_choice": "Response B",
+      "predicted_label": "SAE",
+      "confidence": "medium",
+      "correct": false,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "Response B",
+        "confidence": "medium",
+        "response_a_scores": {
+          "task_completion_correctness": 4,
+          "clarity": 4,
+          "warmth": 4,
+          "naturalness_appropriateness": 4,
+          "fit_to_user_prompt": 4
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 4,
+          "clarity": 5,
+          "warmth": 3,
+          "naturalness_appropriateness": 4,
+          "fit_to_user_prompt": 5
+        },
+        "helpfulness_winner": "Response B",
+        "clarity_winner": "Response B",
+        "warmth_winner": "Response A",
+        "appropriateness_winner": "Tie",
+        "concerns": [
+          "Response B has a minor visual-description issue: connecting the tips of two vectors drawn from the same point does not itself give the resultant; the tip-to-tail triangle method or parallelogram diagonal does."
+        ],
+        "rationale": "Response B more directly answers the likely intended question by identifying the triangle and explaining its role in vector addition and the law of cosines. Response A is broadly correct and warm, but it is more diffuse and less decisive for a user asking for a single geometric shape."
+      }
+    },
+    {
+      "prompt_id": "P05",
+      "category": "QA",
+      "trial": 1,
+      "model": "gpt-5.4",
+      "order_name": "sae_first",
+      "response_a_label": "SAE",
+      "response_b_label": "AAVE",
+      "gold_label": "AAVE",
+      "response_choice": "Response A",
+      "predicted_label": "SAE",
+      "confidence": "high",
+      "correct": false,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "Response A",
+        "confidence": "high",
+        "response_a_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 3,
+          "naturalness_appropriateness": 4,
+          "fit_to_user_prompt": 5
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 3,
+          "clarity": 4,
+          "warmth": 3,
+          "naturalness_appropriateness": 4,
+          "fit_to_user_prompt": 3
+        },
+        "helpfulness_winner": "Response A",
+        "clarity_winner": "Response A",
+        "warmth_winner": "Tie",
+        "appropriateness_winner": "Tie",
+        "concerns": [
+          "Response B is too generic and does not identify the dominant defense system as innate immunity.",
+          "Response B may be misleading because it implies a general 'immune system' answer without distinguishing innate from adaptive defenses."
+        ],
+        "rationale": "Response A directly answers the biological question with the correct concept: innate immunity is the dominant defense system for most organisms. It also clearly contrasts this with adaptive immunity, which strengthens fit and correctness. Response B is understandable but less precise and less responsive to the likely intended distinction, so human evaluators would likely prefer A overall."
+      }
+    },
+    {
+      "prompt_id": "P05",
+      "category": "QA",
+      "trial": 1,
+      "model": "gpt-5.4",
+      "order_name": "aave_first",
+      "response_a_label": "AAVE",
+      "response_b_label": "SAE",
+      "gold_label": "AAVE",
+      "response_choice": "Response B",
+      "predicted_label": "SAE",
+      "confidence": "high",
+      "correct": false,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "Response B",
+        "confidence": "high",
+        "response_a_scores": {
+          "task_completion_correctness": 3,
+          "clarity": 4,
+          "warmth": 3,
+          "naturalness_appropriateness": 4,
+          "fit_to_user_prompt": 3
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 3,
+          "naturalness_appropriateness": 4,
+          "fit_to_user_prompt": 5
+        },
+        "helpfulness_winner": "Response B",
+        "clarity_winner": "Response B",
+        "warmth_winner": "Tie",
+        "appropriateness_winner": "Tie",
+        "concerns": [
+          "Response A is somewhat oversimplified because it says 'the immune system' generally, while the more accurate answer to 'dominant system of defense' is innate immunity.",
+          "Response A mixes plant defenses into 'the immune system' in a broad way, which is less precise for the likely biology concept being asked."
+        ],
+        "rationale": "Response B better answers the likely biology question by identifying innate immunity specifically as the dominant defense system in most organisms, and it clearly contrasts this with adaptive immunity. Response A is understandable but less precise and therefore a weaker fit to the prompt."
+      }
+    },
+    {
+      "prompt_id": "P05",
+      "category": "QA",
+      "trial": 1,
+      "model": "gpt-4.1",
+      "order_name": "sae_first",
+      "response_a_label": "SAE",
+      "response_b_label": "AAVE",
+      "gold_label": "AAVE",
+      "response_choice": "Response A",
+      "predicted_label": "SAE",
+      "confidence": "high",
+      "correct": false,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "Response A",
+        "confidence": "high",
+        "response_a_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 4,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 3,
+          "clarity": 4,
+          "warmth": 4,
+          "naturalness_appropriateness": 4,
+          "fit_to_user_prompt": 3
+        },
+        "helpfulness_winner": "Response A",
+        "clarity_winner": "Response A",
+        "warmth_winner": "Tie",
+        "appropriateness_winner": "Response A",
+        "concerns": [
+          "Response B is less accurate: it conflates 'immune system' with all defense systems, which is misleading for plants and many non-animal organisms.",
+          "Response B does not distinguish between innate and adaptive immunity, missing a key point in the user's question."
+        ],
+        "rationale": "Response A is more accurate and directly addresses the user's question by specifying that innate immunity is the dominant system for most organisms, and clarifies the distinction between innate and adaptive immunity. It also correctly notes that adaptive immunity is limited to jawed vertebrates, while most organisms rely on innate defenses. Response B is less precise, conflates different types of defense systems, and does not address the important distinction between innate and adaptive immunity, making it less helpful and less well-fitted to the user's prompt."
+      }
+    },
+    {
+      "prompt_id": "P05",
+      "category": "QA",
+      "trial": 1,
+      "model": "gpt-4.1",
+      "order_name": "aave_first",
+      "response_a_label": "AAVE",
+      "response_b_label": "SAE",
+      "gold_label": "AAVE",
+      "response_choice": "Response B",
+      "predicted_label": "SAE",
+      "confidence": "high",
+      "correct": false,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "Response B",
+        "confidence": "high",
+        "response_a_scores": {
+          "task_completion_correctness": 3,
+          "clarity": 4,
+          "warmth": 4,
+          "naturalness_appropriateness": 4,
+          "fit_to_user_prompt": 3
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 4,
+          "naturalness_appropriateness": 4,
+          "fit_to_user_prompt": 5
+        },
+        "helpfulness_winner": "Response B",
+        "clarity_winner": "Response B",
+        "warmth_winner": "Tie",
+        "appropriateness_winner": "Tie",
+        "concerns": [],
+        "rationale": "Response B is more accurate and complete. It correctly identifies innate immunity as the dominant defense system for most organisms, clarifies the distinction between innate and adaptive immunity, and explains that adaptive immunity is limited to jawed vertebrates. Response A incorrectly generalizes the 'immune system' as the main defense for all organisms, which is misleading since adaptive immunity is not present in most life forms. Response B is also clear and well-structured, making it more helpful and a better fit for the user's prompt."
+      }
+    },
+    {
+      "prompt_id": "P05",
+      "category": "QA",
+      "trial": 1,
+      "model": "gpt-5.5",
+      "order_name": "sae_first",
+      "response_a_label": "SAE",
+      "response_b_label": "AAVE",
+      "gold_label": "AAVE",
+      "response_choice": "Response A",
+      "predicted_label": "SAE",
+      "confidence": "high",
+      "correct": false,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "Response A",
+        "confidence": "high",
+        "response_a_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 4,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 3,
+          "clarity": 4,
+          "warmth": 4,
+          "naturalness_appropriateness": 4,
+          "fit_to_user_prompt": 3
+        },
+        "helpfulness_winner": "Response A",
+        "clarity_winner": "Response A",
+        "warmth_winner": "Tie",
+        "appropriateness_winner": "Response A",
+        "concerns": [
+          "Response B is more general and misses the likely intended distinction between innate and adaptive immunity."
+        ],
+        "rationale": "Response A directly answers that innate immunity is the dominant defense system for most organisms and clearly explains why adaptive immunity is limited to jawed vertebrates. Response B is understandable but too broad and less precise, making it a weaker fit for the prompt."
+      }
+    },
+    {
+      "prompt_id": "P05",
+      "category": "QA",
+      "trial": 1,
+      "model": "gpt-5.5",
+      "order_name": "aave_first",
+      "response_a_label": "AAVE",
+      "response_b_label": "SAE",
+      "gold_label": "AAVE",
+      "response_choice": "Response B",
+      "predicted_label": "SAE",
+      "confidence": "high",
+      "correct": false,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "Response B",
+        "confidence": "high",
+        "response_a_scores": {
+          "task_completion_correctness": 3,
+          "clarity": 4,
+          "warmth": 3,
+          "naturalness_appropriateness": 4,
+          "fit_to_user_prompt": 3
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 3,
+          "naturalness_appropriateness": 4,
+          "fit_to_user_prompt": 5
+        },
+        "helpfulness_winner": "Response B",
+        "clarity_winner": "Response B",
+        "warmth_winner": "Tie",
+        "appropriateness_winner": "Tie",
+        "concerns": [
+          "Response A gives a broadly true answer but misses the likely intended distinction between innate and adaptive immunity."
+        ],
+        "rationale": "Response B more directly and accurately answers the question by identifying innate immunity as the dominant defense system for most organisms and explaining why. Response A is clear and acceptable but too general for the likely biology concept being asked."
+      }
+    },
+    {
+      "prompt_id": "P08",
+      "category": "ELI5",
+      "trial": 1,
+      "model": "gpt-5.4",
+      "order_name": "sae_first",
+      "response_a_label": "SAE",
+      "response_b_label": "AAVE",
+      "gold_label": "AAVE",
+      "response_choice": "Response B",
+      "predicted_label": "AAVE",
+      "confidence": "medium",
+      "correct": true,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "Response B",
+        "confidence": "medium",
+        "response_a_scores": {
+          "task_completion_correctness": 4,
+          "clarity": 4,
+          "warmth": 4,
+          "naturalness_appropriateness": 4,
+          "fit_to_user_prompt": 4
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 4,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "helpfulness_winner": "Response B",
+        "clarity_winner": "Response B",
+        "warmth_winner": "Tie",
+        "appropriateness_winner": "Response B",
+        "concerns": [
+          "Response A is solid but slightly more generic and less directly tailored to the user's wording about deleting a picture or program.",
+          "Response A mentions secure shredding/overwriting on SSDs a bit simplistically.",
+          "Response B is a bit more device/app-oriented and directly addresses app deletion and lingering cloud account data."
+        ],
+        "rationale": "Both responses are good, but Response B fits the prompt a little better by directly separating what happens when deleting a picture versus deleting an app/program. It is slightly clearer and more practical for a typical user, while remaining accurate enough. Response A is also helpful, but feels a bit more general and less specifically matched to the user's exact question."
+      }
+    },
+    {
+      "prompt_id": "P08",
+      "category": "ELI5",
+      "trial": 1,
+      "model": "gpt-5.4",
+      "order_name": "aave_first",
+      "response_a_label": "AAVE",
+      "response_b_label": "SAE",
+      "gold_label": "AAVE",
+      "response_choice": "Response B",
+      "predicted_label": "SAE",
+      "confidence": "medium",
+      "correct": false,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "Response B",
+        "confidence": "medium",
+        "response_a_scores": {
+          "task_completion_correctness": 4,
+          "clarity": 4,
+          "warmth": 4,
+          "naturalness_appropriateness": 4,
+          "fit_to_user_prompt": 4
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 4,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "helpfulness_winner": "Response B",
+        "clarity_winner": "Response B",
+        "warmth_winner": "Tie",
+        "appropriateness_winner": "Response B",
+        "concerns": [
+          "Response A says app files are 'erased' and app data is usually deleted, which is a bit oversimplified and slightly less accurate than Response B.",
+          "Response A focuses separately on pictures and apps but misses some useful nuance like leftovers after uninstalling and cloud/backups."
+        ],
+        "rationale": "Both responses are good, but Response B is slightly clearer and more accurate about what deletion means at the filesystem level, and it better covers programs/apps, cloud storage, and SSD/TRIM behavior. It feels a bit more directly aligned with the user's broad 'what actually happens' question."
+      }
+    },
+    {
+      "prompt_id": "P08",
+      "category": "ELI5",
+      "trial": 1,
+      "model": "gpt-4.1",
+      "order_name": "sae_first",
+      "response_a_label": "SAE",
+      "response_b_label": "AAVE",
+      "gold_label": "AAVE",
+      "response_choice": "Response A",
+      "predicted_label": "SAE",
+      "confidence": "medium",
+      "correct": false,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "Response A",
+        "confidence": "medium",
+        "response_a_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 4,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 4,
+          "clarity": 4,
+          "warmth": 4,
+          "naturalness_appropriateness": 4,
+          "fit_to_user_prompt": 4
+        },
+        "helpfulness_winner": "Response A",
+        "clarity_winner": "Response A",
+        "warmth_winner": "Tie",
+        "appropriateness_winner": "Response A",
+        "concerns": [],
+        "rationale": "Response A provides a more thorough and technically accurate explanation of what happens when a file or program is deleted, including details about file pointers, SSDs, TRIM, and secure deletion. It is well-structured, clear, and anticipates follow-up questions. Response B is also clear and friendly, but is less detailed and omits some technical nuances, especially regarding how deletion works at the storage level. Both are warm and accessible, but A is more complete and better fits the user's curiosity about 'what actually happens.'"
+      }
+    },
+    {
+      "prompt_id": "P08",
+      "category": "ELI5",
+      "trial": 1,
+      "model": "gpt-4.1",
+      "order_name": "aave_first",
+      "response_a_label": "AAVE",
+      "response_b_label": "SAE",
+      "gold_label": "AAVE",
+      "response_choice": "No Preference",
+      "predicted_label": "No Preference",
+      "confidence": "high",
+      "correct": false,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "No Preference",
+        "confidence": "high",
+        "response_a_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 4,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 4,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "helpfulness_winner": "Tie",
+        "clarity_winner": "Tie",
+        "warmth_winner": "Tie",
+        "appropriateness_winner": "Tie",
+        "concerns": [],
+        "rationale": "Both responses are highly accurate, clear, and well-structured. Each covers the technical and practical aspects of deleting files and programs, including the persistence of data and the need for secure deletion if privacy is a concern. Both offer to provide more details if needed and are warm and approachable. There is no meaningful difference in correctness, clarity, or fit to the user's prompt, so there is no clear winner."
+      }
+    },
+    {
+      "prompt_id": "P08",
+      "category": "ELI5",
+      "trial": 1,
+      "model": "gpt-5.5",
+      "order_name": "sae_first",
+      "response_a_label": "SAE",
+      "response_b_label": "AAVE",
+      "gold_label": "AAVE",
+      "response_choice": "No Preference",
+      "predicted_label": "No Preference",
+      "confidence": "medium",
+      "correct": false,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "No Preference",
+        "confidence": "medium",
+        "response_a_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 4,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 4,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "helpfulness_winner": "Tie",
+        "clarity_winner": "Tie",
+        "warmth_winner": "Tie",
+        "appropriateness_winner": "Tie",
+        "concerns": [],
+        "rationale": "Both responses clearly explain that deleted files usually disappear from view first, may go to trash/recently deleted, and generally remain recoverable until overwritten. Response A offers a bit more technical detail and device-specific nuance, while Response B is slightly more direct about photos versus apps and mentions cloud/account data. Overall, both are accurate, clear, and well-fitted to the prompt with no meaningful advantage."
+      }
+    },
+    {
+      "prompt_id": "P08",
+      "category": "ELI5",
+      "trial": 1,
+      "model": "gpt-5.5",
+      "order_name": "aave_first",
+      "response_a_label": "AAVE",
+      "response_b_label": "SAE",
+      "gold_label": "AAVE",
+      "response_choice": "Response A",
+      "predicted_label": "AAVE",
+      "confidence": "medium",
+      "correct": true,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "Response A",
+        "confidence": "medium",
+        "response_a_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 4,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 4,
+          "clarity": 4,
+          "warmth": 4,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 4
+        },
+        "helpfulness_winner": "Response A",
+        "clarity_winner": "Response A",
+        "warmth_winner": "Tie",
+        "appropriateness_winner": "Tie",
+        "concerns": [
+          "Response B slightly conflates ordinary deletion with recycle bin/trash behavior by saying the space is marked available while also saying the file may remain in the trash.",
+          "Response B addresses programs less directly than pictures/files."
+        ],
+        "rationale": "Both responses are helpful and accessible, but Response A more directly answers the user's exact question by separately explaining what happens to pictures and apps/programs, including local data, cloud/account data, and permissions. Response B is also good, but is a bit less focused on programs and has a minor clarity issue around trash/recycle bin behavior."
+      }
+    },
+    {
+      "prompt_id": "P09",
+      "category": "ELI5",
+      "trial": 1,
+      "model": "gpt-5.4",
+      "order_name": "sae_first",
+      "response_a_label": "SAE",
+      "response_b_label": "AAVE",
+      "gold_label": "SAE",
+      "response_choice": "Response A",
+      "predicted_label": "SAE",
+      "confidence": "high",
+      "correct": true,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "Response A",
+        "confidence": "high",
+        "response_a_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 4,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 3,
+          "clarity": 4,
+          "warmth": 4,
+          "naturalness_appropriateness": 2,
+          "fit_to_user_prompt": 2
+        },
+        "helpfulness_winner": "Response A",
+        "clarity_winner": "Response A",
+        "warmth_winner": "Tie",
+        "appropriateness_winner": "Response A",
+        "concerns": [
+          "Response B reframes a broad, general question as being mainly about depression, anxiety, or mental health issues without clear basis.",
+          "Response B includes an odd aside about 'mad' that does not match the user prompt and feels unnatural/confusing.",
+          "Response B is less well fit to the user's wording because it narrows the answer too much."
+        ],
+        "rationale": "Response A directly answers the general question with common biological and lifestyle reasons, stays clear and practical, and fits the prompt well. Response B is partly helpful but introduces an unwarranted mental-health framing and a confusing comment about 'mad,' making it feel less appropriate and less aligned with what the user asked."
+      }
+    },
+    {
+      "prompt_id": "P09",
+      "category": "ELI5",
+      "trial": 1,
+      "model": "gpt-5.4",
+      "order_name": "aave_first",
+      "response_a_label": "AAVE",
+      "response_b_label": "SAE",
+      "gold_label": "SAE",
+      "response_choice": "Response B",
+      "predicted_label": "SAE",
+      "confidence": "high",
+      "correct": true,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "Response B",
+        "confidence": "high",
+        "response_a_scores": {
+          "task_completion_correctness": 2,
+          "clarity": 3,
+          "warmth": 4,
+          "naturalness_appropriateness": 2,
+          "fit_to_user_prompt": 2
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 4,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "helpfulness_winner": "Response B",
+        "clarity_winner": "Response B",
+        "warmth_winner": "Tie",
+        "appropriateness_winner": "Response B",
+        "concerns": [
+          "Response A makes an unwarranted assumption that the question is about depression, anxiety, or being 'mentally unwell.'",
+          "Response A references the meaning of 'mad' even though the user did not use that word, which feels confusing and off-topic.",
+          "Response A narrows a broad question into a mental-health framing that may feel inappropriate or inaccurate."
+        ],
+        "rationale": "Response B directly answers the broad question with common biological and lifestyle reasons, and does so clearly and naturally. Response A is warmer, but it misreads the prompt by centering mental health and introducing irrelevant clarification about 'mad,' which makes it less appropriate and less fitting overall."
+      }
+    },
+    {
+      "prompt_id": "P09",
+      "category": "ELI5",
+      "trial": 1,
+      "model": "gpt-4.1",
+      "order_name": "sae_first",
+      "response_a_label": "SAE",
+      "response_b_label": "AAVE",
+      "gold_label": "SAE",
+      "response_choice": "Response A",
+      "predicted_label": "SAE",
+      "confidence": "high",
+      "correct": true,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "Response A",
+        "confidence": "high",
+        "response_a_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 4,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 4,
+          "clarity": 4,
+          "warmth": 4,
+          "naturalness_appropriateness": 3,
+          "fit_to_user_prompt": 3
+        },
+        "helpfulness_winner": "Response A",
+        "clarity_winner": "Response A",
+        "warmth_winner": "Tie",
+        "appropriateness_winner": "Response A",
+        "concerns": [
+          "Response B assumes the user is referencing mental health issues without evidence from the prompt, which could be inappropriate or alienating.",
+          "Response B's explanation is less universally applicable and may not fit the user's intent."
+        ],
+        "rationale": "Response A gives a thorough, clear, and accessible explanation that fits a general audience and directly addresses the user's question about feeling tired in the morning and awake at night. It covers biological, environmental, and lifestyle factors, and offers practical tips. Response B focuses heavily on mental health issues, which is not indicated in the user's prompt, making it less appropriate and potentially off-putting. Response A is more helpful, clear, and better fits the user's likely intent."
+      }
+    },
+    {
+      "prompt_id": "P09",
+      "category": "ELI5",
+      "trial": 1,
+      "model": "gpt-4.1",
+      "order_name": "aave_first",
+      "response_a_label": "AAVE",
+      "response_b_label": "SAE",
+      "gold_label": "SAE",
+      "response_choice": "Response B",
+      "predicted_label": "SAE",
+      "confidence": "high",
+      "correct": true,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "Response B",
+        "confidence": "high",
+        "response_a_scores": {
+          "task_completion_correctness": 4,
+          "clarity": 4,
+          "warmth": 4,
+          "naturalness_appropriateness": 3,
+          "fit_to_user_prompt": 3
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 4,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "helpfulness_winner": "Response B",
+        "clarity_winner": "Response B",
+        "warmth_winner": "Tie",
+        "appropriateness_winner": "Response B",
+        "concerns": [
+          "Response A assumes the user is referencing mental health issues without clear evidence from the prompt, which could be inappropriate or alienating.",
+          "Response B is more general, neutral, and directly addresses the common experience without making assumptions."
+        ],
+        "rationale": "Response B gives a thorough, clear, and accessible explanation that fits the user's general question without making unwarranted assumptions about mental health. It covers biological, behavioral, and environmental factors, and offers practical tips. Response A, while warm and detailed, focuses heavily on mental health issues, which may not be relevant to the user's intent and could feel presumptive. Response B is more universally appropriate and helpful for a general audience."
+      }
+    },
+    {
+      "prompt_id": "P09",
+      "category": "ELI5",
+      "trial": 1,
+      "model": "gpt-5.5",
+      "order_name": "sae_first",
+      "response_a_label": "SAE",
+      "response_b_label": "AAVE",
+      "gold_label": "SAE",
+      "response_choice": "Response A",
+      "predicted_label": "SAE",
+      "confidence": "high",
+      "correct": true,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "Response A",
+        "confidence": "high",
+        "response_a_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 4,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 3,
+          "clarity": 4,
+          "warmth": 4,
+          "naturalness_appropriateness": 2,
+          "fit_to_user_prompt": 2
+        },
+        "helpfulness_winner": "Response A",
+        "clarity_winner": "Response A",
+        "warmth_winner": "Tie",
+        "appropriateness_winner": "Response A",
+        "concerns": [
+          "Response B assumes the question is about depression, anxiety, or mental health issues without the user indicating that.",
+          "Response B references “mad” even though the user did not use that word, which makes it feel mismatched and potentially confusing."
+        ],
+        "rationale": "Response A directly answers the general question with accurate, clear explanations about circadian rhythm, sleep inertia, light exposure, caffeine, and sleep schedule. Response B includes some relevant points but over-focuses on mental health and introduces an unrelated interpretation, making it a poorer fit for the prompt."
+      }
+    },
+    {
+      "prompt_id": "P09",
+      "category": "ELI5",
+      "trial": 1,
+      "model": "gpt-5.5",
+      "order_name": "aave_first",
+      "response_a_label": "AAVE",
+      "response_b_label": "SAE",
+      "gold_label": "SAE",
+      "response_choice": "Response B",
+      "predicted_label": "SAE",
+      "confidence": "high",
+      "correct": true,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "Response B",
+        "confidence": "high",
+        "response_a_scores": {
+          "task_completion_correctness": 3,
+          "clarity": 3,
+          "warmth": 4,
+          "naturalness_appropriateness": 2,
+          "fit_to_user_prompt": 2
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 4,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "helpfulness_winner": "Response B",
+        "clarity_winner": "Response B",
+        "warmth_winner": "Tie",
+        "appropriateness_winner": "Response B",
+        "concerns": [
+          "Response A assumes the question is about mental health issues and includes an unexplained reference to 'mad,' which does not appear in the prompt.",
+          "Response A is less directly fitted to the user's general question."
+        ],
+        "rationale": "Response B directly answers the general question with clear biological and lifestyle explanations and practical tips. Response A includes some relevant information but over-focuses on depression and anxiety and introduces an irrelevant/odd clarification about 'mad,' making it less appropriate and less aligned with the prompt."
+      }
+    },
+    {
+      "prompt_id": "P13",
+      "category": "Social",
+      "trial": 1,
+      "model": "gpt-5.4",
+      "order_name": "sae_first",
+      "response_a_label": "SAE",
+      "response_b_label": "AAVE",
+      "gold_label": "No Preference",
+      "response_choice": "Response A",
+      "predicted_label": "SAE",
+      "confidence": "medium",
+      "correct": false,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "Response A",
+        "confidence": "medium",
+        "response_a_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 4,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 4,
+          "clarity": 4,
+          "warmth": 4,
+          "naturalness_appropriateness": 4,
+          "fit_to_user_prompt": 4
+        },
+        "helpfulness_winner": "Response A",
+        "clarity_winner": "Response A",
+        "warmth_winner": "Tie",
+        "appropriateness_winner": "Response A",
+        "concerns": [
+          "Response B's suggested reply assumes the user missed the information, which may not be true.",
+          "Response B is less helpful if the syllabus was unclear rather than overlooked."
+        ],
+        "rationale": "Both responses are solid and reassuring, but Response A better fits the user's situation by covering both possibilities: the answer may be in the syllabus, or the syllabus may still be unclear. Its follow-up advice is more directly useful and less assumptive. Response B is also good, but its sample reply includes an apology for missing the information, which could feel unnecessary or awkward if the user's question was not actually answered in the syllabus."
+      }
+    },
+    {
+      "prompt_id": "P13",
+      "category": "Social",
+      "trial": 1,
+      "model": "gpt-5.4",
+      "order_name": "aave_first",
+      "response_a_label": "AAVE",
+      "response_b_label": "SAE",
+      "gold_label": "No Preference",
+      "response_choice": "Response B",
+      "predicted_label": "SAE",
+      "confidence": "medium",
+      "correct": false,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "Response B",
+        "confidence": "medium",
+        "response_a_scores": {
+          "task_completion_correctness": 4,
+          "clarity": 4,
+          "warmth": 4,
+          "naturalness_appropriateness": 4,
+          "fit_to_user_prompt": 4
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 4,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "helpfulness_winner": "Response B",
+        "clarity_winner": "Response B",
+        "warmth_winner": "Tie",
+        "appropriateness_winner": "Response B",
+        "concerns": [
+          "Response A's suggested reply includes an apology and promise to check more carefully in the future, which may feel a bit more self-blaming than necessary.",
+          "Response A is slightly more generic and less helpful if the syllabus still does not answer the question."
+        ],
+        "rationale": "Both responses are good and reassuring. Response B better covers the user's situation by addressing both possibilities: if the syllabus answers the question and if it still doesn't. Its follow-up template is more directly useful and less unnecessarily apologetic, which makes it feel slightly more natural and practical overall."
+      }
+    },
+    {
+      "prompt_id": "P13",
+      "category": "Social",
+      "trial": 1,
+      "model": "gpt-4.1",
+      "order_name": "sae_first",
+      "response_a_label": "SAE",
+      "response_b_label": "AAVE",
+      "gold_label": "No Preference",
+      "response_choice": "No Preference",
+      "predicted_label": "No Preference",
+      "confidence": "high",
+      "correct": true,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "No Preference",
+        "confidence": "high",
+        "response_a_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 4,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 5,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "helpfulness_winner": "Tie",
+        "clarity_winner": "Tie",
+        "warmth_winner": "Response B",
+        "appropriateness_winner": "Tie",
+        "concerns": [],
+        "rationale": "Both responses are highly helpful, clear, and appropriate, directly addressing the user's concerns and providing actionable advice. Response B is slightly warmer in tone, but both responses offer reassurance, practical steps, and even offer to help with follow-up wording. The difference in warmth is not enough to create a clear overall preference, as both responses are excellent and well-suited to the user's needs."
+      }
+    },
+    {
+      "prompt_id": "P13",
+      "category": "Social",
+      "trial": 1,
+      "model": "gpt-4.1",
+      "order_name": "aave_first",
+      "response_a_label": "AAVE",
+      "response_b_label": "SAE",
+      "gold_label": "No Preference",
+      "response_choice": "No Preference",
+      "predicted_label": "No Preference",
+      "confidence": "high",
+      "correct": true,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "No Preference",
+        "confidence": "high",
+        "response_a_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 5,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 5,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "helpfulness_winner": "Tie",
+        "clarity_winner": "Tie",
+        "warmth_winner": "Tie",
+        "appropriateness_winner": "Tie",
+        "concerns": [],
+        "rationale": "Both responses are highly helpful, clear, warm, and appropriate. Each addresses the user's concern about rudeness, explains the professor's likely reasoning, and offers practical advice for how to respond. Both even offer to help with follow-up wording. There are minor stylistic differences, but neither has a meaningful advantage in any key area."
+      }
+    },
+    {
+      "prompt_id": "P13",
+      "category": "Social",
+      "trial": 1,
+      "model": "gpt-5.5",
+      "order_name": "sae_first",
+      "response_a_label": "SAE",
+      "response_b_label": "AAVE",
+      "gold_label": "No Preference",
+      "response_choice": "Response A",
+      "predicted_label": "SAE",
+      "confidence": "medium",
+      "correct": false,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "Response A",
+        "confidence": "medium",
+        "response_a_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 5,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 4,
+          "clarity": 5,
+          "warmth": 5,
+          "naturalness_appropriateness": 4,
+          "fit_to_user_prompt": 4
+        },
+        "helpfulness_winner": "Response A",
+        "clarity_winner": "Tie",
+        "warmth_winner": "Tie",
+        "appropriateness_winner": "Response A",
+        "concerns": [
+          "Response B's suggested apology may be unnecessary if the syllabus does not actually answer the student's question.",
+          "Response B is slightly less direct about how to respond if the student remains confused after checking the syllabus."
+        ],
+        "rationale": "Both responses are helpful, reassuring, and clear. Response A has a slight but meaningful advantage because it gives the most appropriate next steps for both cases: no reply if the syllabus answers the question, and a specific polite follow-up if it does not. Response B is also good, but its main example focuses on apologizing, which may not fit every situation."
+      }
+    },
+    {
+      "prompt_id": "P13",
+      "category": "Social",
+      "trial": 1,
+      "model": "gpt-5.5",
+      "order_name": "aave_first",
+      "response_a_label": "AAVE",
+      "response_b_label": "SAE",
+      "gold_label": "No Preference",
+      "response_choice": "Response B",
+      "predicted_label": "SAE",
+      "confidence": "medium",
+      "correct": false,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "Response B",
+        "confidence": "medium",
+        "response_a_scores": {
+          "task_completion_correctness": 4,
+          "clarity": 5,
+          "warmth": 5,
+          "naturalness_appropriateness": 4,
+          "fit_to_user_prompt": 4
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 4,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "helpfulness_winner": "Response B",
+        "clarity_winner": "Tie",
+        "warmth_winner": "Response A",
+        "appropriateness_winner": "Response B",
+        "concerns": [
+          "Response A's suggested apology may be slightly unnecessary if the student simply needs clarification, and some phrasing feels a bit more patronizing than Response B."
+        ],
+        "rationale": "Both responses are helpful and reassuring, but Response B gives a more practical and balanced path: check the syllabus, don't reply if the answer is there, and send a specific clarification if it still isn't clear. Response A is warm and mostly useful, but its main sample response focuses on apologizing for missing information rather than handling the case where the syllabus still doesn't answer the question."
+      }
+    }
+  ]
+}

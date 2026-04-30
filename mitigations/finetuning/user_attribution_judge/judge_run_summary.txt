@@ -1,0 +1,40 @@
+USER-ATTRIBUTION DRIFT JUDGE — RUN SUMMARY
+==============================================================
+Input file:            dpo_responses_20260428T065048Z.jsonl
+Total pairs processed: 1033
+
+FINAL VERDICT COUNTS
+----------------------------------------
+  FLAGGED                      7  (0.7%)
+  CLEAN                     1020  (98.7%)
+  UNCLEAR                      0  (0.0%)
+  DISAGREEMENT                 6  (0.6%)
+  PARSE_ERROR                  0  (0.0%)
+
+PER-CATEGORY BREAKDOWN
+----------------------------------------
+  Algorithm  (n=4)
+    CLEAN                    4
+  ELI5  (n=24)
+    CLEAN                    22
+    DISAGREEMENT             2
+  QA  (n=1005)
+    FLAGGED                  7
+    CLEAN                    994
+    DISAGREEMENT             4
+
+DPO PAIRS PRODUCED: 7
+
+SAMPLE FLAGGED PAIRS (first 3 — manual sanity check)
+--------------------------------------------------------------
+  prompt_index : 79
+  category     : QA
+  attr_content : "Your question sounds like it could be a line from a song lyric, a riddle, or a cultural reference."
+
+  prompt_index : 146
+  category     : QA
+  attr_content : "You seem to be referencing the various roles of a pastor or minister in a Christian church context."
+
+  prompt_index : 228
+  category     : QA
+  attr_content : "It seems like you’re referencing part of a quote or a specific context, possibly in a casual or humorous way."
