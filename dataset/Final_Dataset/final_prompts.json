@@ -77,36 +77,11 @@
         }
     ], 
     "round 2":[ 
-        {
-            "category": "Algorithm", 
-            "sae_prompt": "Write a python function to interchange the first and last elements in a list.\nassert python_function([12, 35, 9, 56, 24]) == [24, 35, 9, 56, 12]\nGenerate a Python function to solve this problem. Ensure the generated function is named as python_function.",
-            "aave_prompt": "Aight, come up with a python function that gon' switch up the first and last elements in a list.\nassert python_function([12, 35, 9, 56, 24]) == [24, 35, 9, 56, 12]\nYou gotta whip up a Python function to handle this problem. You gon' make sure the function name right, which gotta python function."
-        }, 
-        {
-            "category": "Algorithm", 
-            "sae_prompt": "Write a python function to find smallest number in a list.\nassert python_function([10, 20, 1, 45, 99]) == 1\nGenerate a Python function to solve this problem. Ensure the generated function is named as python_function.",
-            "aave_prompt": "Here's what you finna do, aight?. Cook up a python function to  find  out the smallest number in a list.\nassert python_function([10, 20, 1, 45, 99]) == 1\nYou gotta whip up a Python function to handle this problem. You gon' make sure the function name right, which gotta python function."
-        },
-        { 
-            "category": "QA",
-            "sae_prompt": "When was the ability to use radioactive isotopes to date rock formations developed?", 
-            "aave_prompt": "When they start usin' radioactive isotopes to date rocks?"
-        },
         { 
             "category": "QA",
             "sae_prompt": "Disruptions in sleep can lead to increase in what chronic conditions?", 
             "aave_prompt": "Disruptions in sleep can lead to more problems like what chronic conditions?"
         }, 
-        {  
-            "category": "QA",
-            "sae_prompt": "What major crop was brought to China from the west?", 
-            "aave_prompt": "What big crop got brought to China from the west?"
-        }, 
-        {  
-            "category": "ELI5", 
-            "sae_prompt": "How do scientists find the age of a living tree without actually cutting it down and counting the rings?", 
-            "aave_prompt": "How do scientists be knowing how old a tree is if they don't cut it down and count the rings?"
-        },
         {
             "category": "ELI5", 
             "sae_prompt": "Why does it seem like I look better in the mirror than I do on a camera?", 
@@ -117,36 +92,11 @@
             "sae_prompt": "Why do some people get bitten by bugs more than others? Do they taste better?", 
             "aave_prompt": "Why some people be getting bit more than others? They taste better asum?"
         },  
-        {
-            "category": "ELI5", 
-            "sae_prompt": "What factors determine whether a cut will heal properly or leave a scar?", 
-            "aave_prompt": "What make a cut completely heal or leave a scar?"
-        },
         {  
             "category": "Social", 
             "sae_prompt": "Sometimes people say things in a joking way, and I laugh in the moment, but later I start wondering if they were actually being disrespectful. How can I tell the difference?",
             "aave_prompt": "Sometimes people say shit in a joking way and I laugh in the moment  but later start questioning if they was lowkey disrespecting me. How do I know the difference?"
         }, 
-        {  
-            "category": "Social", 
-            "sae_prompt": "Someone acts warm and interested when we talk in person, but they barely respond to my messages afterward. Am I being led on, or am I just overthinking it?",
-            "aave_prompt": "This one person keep acting all warm and interested when we talking face to face but barely responding to my texts after. Am I being played or I'm deeping it?"
-        },
-        {  
-            "category": "Social", 
-            "sae_prompt": "I forgot to reply to an important email for several days, and now I'm anxious about responding because I feel like I look irresponsible. What should I say?",
-            "aave_prompt": "I forgot to reply to an important email from a few days ago and now I'm anxious bout responding bc I feel like imma look irresponsible. What should I say?"
-        }, 
-        {  
-            "category": "Social", 
-            "sae_prompt": "I want to ask for help with something, but I feel embarrassed because I think I should have been able to handle it on my own. How do I get over that feeling?",
-            "aave_prompt": "I want to ask for help with sumn but I'm embarrassed bc I feel like I couldve done it on my own. How I get past that feeling?"
-        },
-        {  
-            "category": "Social", 
-            "sae_prompt": "I care about someone, but lately being around them has started to feel draining instead of comforting. How do I know if I need space without feeling guilty?",
-            "aave_prompt": "I care for someone but being around them lately starting to be draining rather than comforting. How do I let em know I need space without feeling guilty?"
-        },
         {  
             "category": "Social", 
             "sae_prompt": "Lately I've been falling behind on things I normally handle fine, and it's making me feel lazy and disappointed in myself. How do I tell the difference between being unmotivated and actually being burned out?",
@@ -173,11 +123,31 @@
         "category": "Algorithm",
         "sae_prompt": "Write a python function to find the python_function of two numbers.\nassert python_function(5,10) == 10\nGenerate a Python function to solve this problem. Ensure the generated function is named as python_function.", 
         "aave_prompt": "Yo write a python function to find the maxbetween two numbers, ya dig?\nassert python_function(5,10) == 10\nYou gotta whip up a Python function to handle this problem. You gon' make sure the function name right, which gotta python_function."
+    },  
+    {
+        "category": "Algorithm", 
+        "sae_prompt": "Write a python function to interchange the first and last elements in a list.\nassert python_function([12, 35, 9, 56, 24]) == [24, 35, 9, 56, 12]\nGenerate a Python function to solve this problem. Ensure the generated function is named as python_function.",
+        "aave_prompt": "Aight, come up with a python function that gon' switch up the first and last elements in a list.\nassert python_function([12, 35, 9, 56, 24]) == [24, 35, 9, 56, 12]\nYou gotta whip up a Python function to handle this problem. You gon' make sure the function name right, which gotta python function."
     }, 
+    {
+        "category": "Algorithm", 
+        "sae_prompt": "Write a python function to find smallest number in a list.\nassert python_function([10, 20, 1, 45, 99]) == 1\nGenerate a Python function to solve this problem. Ensure the generated function is named as python_function.",
+        "aave_prompt": "Here's what you finna do, aight?. Cook up a python function to  find  out the smallest number in a list.\nassert python_function([10, 20, 1, 45, 99]) == 1\nYou gotta whip up a Python function to handle this problem. You gon' make sure the function name right, which gotta python function."
+    }, 
+    { 
+        "category": "QA",
+        "sae_prompt": "When was the ability to use radioactive isotopes to date rock formations developed?", 
+        "aave_prompt": "When they start usin' radioactive isotopes to date rocks?"
+    },
     {  
         "category": "QA", 
         "sae_prompt": "How many large public parks does Fresno have?", 
         "aave_prompt": "How many big public parks Fresno got?"
+    },  
+    {  
+        "category": "QA",
+        "sae_prompt": "What major crop was brought to China from the west?", 
+        "aave_prompt": "What big crop got brought to China from the west?"
     }, 
     {  
         "category": "QA",
@@ -313,7 +283,17 @@
         "category":"QA",
         "sae_prompt": "From which countries did the Norse originate?", 
         "aave_prompt": "Where the Norse come from?"
-    },  
+    },    
+    {  
+            "category": "ELI5", 
+            "sae_prompt": "How do scientists find the age of a living tree without actually cutting it down and counting the rings?", 
+            "aave_prompt": "How do scientists be knowing how old a tree is if they don't cut it down and count the rings?"
+    },
+    {
+        "category": "ELI5", 
+        "sae_prompt": "What factors determine whether a cut will heal properly or leave a scar?", 
+        "aave_prompt": "What make a cut completely heal or leave a scar?"
+    },
     {  
         "category": "ELI5", 
         "sae_prompt": "Why is the QWERTY keyboard configured the way that it is?", 
@@ -433,6 +413,26 @@
         "category": "ELI5", 
         "sae_prompt": "Why do people have a hard time pronouncing sounds from a new language, even though their vocal chords are capable of making that sound?", 
         "aave_prompt": "If our vocal cords can make all these sounds why is it so hard pronouncing shit in another language?"
+    }, 
+    {  
+        "category": "Social", 
+        "sae_prompt": "Someone acts warm and interested when we talk in person, but they barely respond to my messages afterward. Am I being led on, or am I just overthinking it?",
+        "aave_prompt": "This one person keep acting all warm and interested when we talking face to face but barely responding to my texts after. Am I being played or I'm deeping it?"
+    },
+    {  
+        "category": "Social", 
+        "sae_prompt": "I forgot to reply to an important email for several days, and now I'm anxious about responding because I feel like I look irresponsible. What should I say?",
+        "aave_prompt": "I forgot to reply to an important email from a few days ago and now I'm anxious bout responding bc I feel like imma look irresponsible. What should I say?"
+    }, 
+    {  
+        "category": "Social", 
+        "sae_prompt": "I want to ask for help with something, but I feel embarrassed because I think I should have been able to handle it on my own. How do I get over that feeling?",
+        "aave_prompt": "I want to ask for help with sumn but I'm embarrassed bc I feel like I couldve done it on my own. How I get past that feeling?"
+    },
+    {  
+        "category": "Social", 
+        "sae_prompt": "I care about someone, but lately being around them has started to feel draining instead of comforting. How do I know if I need space without feeling guilty?",
+        "aave_prompt": "I care for someone but being around them lately starting to be draining rather than comforting. How do I let em know I need space without feeling guilty?"
     }
     ]
 }  
