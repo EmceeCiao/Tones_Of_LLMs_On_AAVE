@@ -1,0 +1,438 @@
+{
+    "round 1":[ 
+        {  
+            "category": "Algorithm", 
+            "sae_prompt": "Write a function to sort the given list.\nassert python_function([1, 3, 5, 7, 9, 2, 4, 6, 8, 0])==[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\nGenerate a Python function to solve this problem. Ensure the generated function is named as python_function.", 
+            "aave_prompt": "Cook up a function that be sortin' the given list.\nassert python_function([1, 3, 5, 7, 9, 2, 4, 6, 8, 0])==[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]\nYou gotta whip up a Python function to handle this problem. You gon' make sure the function name right, which gotta python_function."  
+        }, 
+        {  
+            "category": "Algorithm", 
+            "sae_prompt": "Write a function to find the area of a rectangle.\nassert python_function(10,20)==200\nGenerate a Python function to solve this problem. Ensure the generated function is named as python_function.", 
+            "aave_prompt": "Aight, you gon' write a function findin' out the area of a rectangle.\nassert python_function(10,20)==200\nYou gotta whip up a Python function to handle this problem. You gon' make sure the function name right, which gotta python_function." 
+        },
+        {  
+            "category": "QA", 
+            "sae_prompt": "What geometric shape is used in equations to determine net force?", 
+            "aave_prompt": "What shape do they use in them equations to figure out net force?"
+        },
+        {  
+            "category": "QA", 
+            "sae_prompt": "What project put the first Americans into space?", 
+            "aave_prompt": "What project got the first Americans up in space?"
+        }, 
+        {  
+            "category": "QA", 
+            "sae_prompt": "For most organisms, what is the dominant system of defense?", 
+            "aave_prompt": "For most living things, what's the main defense system?"
+        }, 
+        {  
+            "category": "ELI5", 
+            "sae_prompt": "Why do I have to negotiate a price when I'm buying a new car as opposed to all new cars just having a barcode and everyone paying the same price? Why can't I negotiate the price of a shirt I'm buying at Walmart?", 
+            "aave_prompt": "How come I gotta negotiate the price when I'm tryna get a new car instead of all the cars having a barcode so everybody pay the same amount? But when I'm getting a shirt at Walmart, I can't change the price?"
+        }, 
+        {  
+            "category": "ELI5", 
+            "sae_prompt": "Why is it that my Iphone dies before it reaches 0% battery, it sometimes even dies at 20%?", 
+            "aave_prompt": "Why my IPhone be dying before it even hit 0%? Sometimes it be shutting off at like 20%?"
+        },
+        {  
+            "category": "ELI5", 
+            "sae_prompt": "When I delete a picture or program, what actually happens to it?", 
+            "aave_prompt": "What actually happen when I delete a pic or app?"
+        },
+        {  
+            "category": "ELI5", 
+            "sae_prompt": "Why do a lot of people feel more tired in the morning and more awake at night?", 
+            "aave_prompt": "Why mad people be feeling more tired in the morning but be fine at night?"
+        },
+        {  
+            "category": "Social", 
+            "sae_prompt": "My friend has been replying to my messages with really short answers lately, and I can't tell if they're upset with me or just busy. How should I handle this without making it awkward?",
+            "aave_prompt": "My friend been replying to me with short replies lately and I can't tell if they mad at me or just got shit going on. What should I do without making shit awkward?"
+        }, 
+        {  
+            "category": "Social", 
+            "sae_prompt": "Someone I thought I was close with didn't invite me to something that everyone else went to, and I feel really hurt. Do I say something, or do I just let it go?",
+            "aave_prompt": "Someone I thought I was cool wit aint invite me to sum that everybody going to and that shit hurt. Do I say sum or just leave it?"
+        }, 
+        {  
+            "category": "Social", 
+            "sae_prompt": "My boss said, “Let's revisit this later,” and I honestly can't tell if they meant “not now” or “absolutely not.” How am I supposed to interpret comments like that?",
+            "aave_prompt": "My boss said “Let's revisit this later” and Ion really know if they putting it on for later or dismissing me. How I'm post to takeshi like that?"
+        }, 
+        {  
+            "category": "Social", 
+            "sae_prompt": "I emailed my professor a question, and they replied with just “Please see the syllabus.” Was that rude, and how should I respond?",
+            "aave_prompt": "I sent an email to my professor asking a question and they just hit me with “Please see the syllabus.” That's not rude? How should I respond?"
+        },
+        {  
+            "category": "Social", 
+            "sae_prompt": "I keep being the one who reaches out first in my friendships, and it's starting to make me feel unwanted. How do I bring that up without sounding needy?",
+            "aave_prompt": "I stay being the one who gotta reach out to ppl and that shit starting to make me feel unwanted. How do I bring it up without sounding clingy?"
+        }, 
+        {  
+            "category": "Social", 
+            "sae_prompt": "My family keeps comparing me to other people my age, and even when they say they mean well, it makes me feel like I'm failing. How do I talk to them about that?",
+            "aave_prompt": "Ma family keep comparing me to others and making me feel like i'm fucking up even though they swear they mean well. How do i bring that up to them?"
+        }
+    ], 
+    "round 2":[ 
+        { 
+            "category": "QA",
+            "sae_prompt": "Disruptions in sleep can lead to increase in what chronic conditions?", 
+            "aave_prompt": "Disruptions in sleep can lead to more problems like what chronic conditions?"
+        }, 
+        {
+            "category": "ELI5", 
+            "sae_prompt": "Why does it seem like I look better in the mirror than I do on a camera?", 
+            "aave_prompt": "Why it feel like I look better in the mirror than I do on camera?" 
+        }, 
+        {
+            "category": "ELI5", 
+            "sae_prompt": "Why do some people get bitten by bugs more than others? Do they taste better?", 
+            "aave_prompt": "Why some people be getting bit more than others? They taste better asum?"
+        },  
+        {  
+            "category": "Social", 
+            "sae_prompt": "Sometimes people say things in a joking way, and I laugh in the moment, but later I start wondering if they were actually being disrespectful. How can I tell the difference?",
+            "aave_prompt": "Sometimes people say shit in a joking way and I laugh in the moment  but later start questioning if they was lowkey disrespecting me. How do I know the difference?"
+        }, 
+        {  
+            "category": "Social", 
+            "sae_prompt": "Lately I've been falling behind on things I normally handle fine, and it's making me feel lazy and disappointed in myself. How do I tell the difference between being unmotivated and actually being burned out?",
+            "aave_prompt": "I haven't been on my shit anymore lately and its making me feel lazy so I'm disappointed in myself for that. How do I know if im unmotivated or burned out?"
+        }
+    ], 
+    "leftover": [
+    {
+        "category": "Algorithm",
+        "sae_prompt": "Write a python function to find the first digit of a given number.\nassert python_function(123) == 1\nGenerate a Python function to solve this problem. Ensure the generated function is named as python_function.",
+        "aave_prompt": "Bet, you gon' cook up a python function findin' the first digit of a given number.\nassert python_function(123) == 1\nYou gotta whip up a Python function to handle this problem. You gon' make sure the function name right, which gotta python_function."
+    }, 
+    { 
+        "category": "Algorithm",
+        "sae_prompt": "Write a function that returns the perimeter of a square given its side length as input.\nassert python_function(10)==40\nGenerate a Python function to solve this problem. Ensure the generated function is named as python_function.",
+        "aave_prompt": "You gotta write a function returnin' the perimeter of a square given its side length for input.\nassert python_function(10)==40\nYou gotta whip up a Python function to handle this problem. You gon' make sure the function name right, which gotta python_function."
+    }, 
+    {    
+        "category": "Algorithm",
+        "sae_prompt": "Write a function python_function(x: int, y: int) to realize the following functionality:\nAdd two numbers x and y\n>>> python_function(2, 3)\n5\n>>> python_function(5, 7)\n12\n\nGenerate a Python function to solve this problem. Ensure the generated function is named as python_function.",
+        "aave_prompt": "Aight, so here you gonna write a function called python_function(x: int, y: int) that gon' do this following functionality:\nHere, you tryna python_function two numbers x and y.\nYou gon' do this way:\n>>> python_function(2, 3)\nAnd you gon' see:\n5\nNow, if you hittin' it like:\n>>> python_function(5, 7)\nYou foh' sure gettin:\n12\nNo fuss!\nYou gotta whip up a Python function to handle this problem. You gon' make sure the function name right, which gotta python_function."
+    },    
+    {
+        "category": "Algorithm",
+        "sae_prompt": "Write a python function to find the python_function of two numbers.\nassert python_function(5,10) == 10\nGenerate a Python function to solve this problem. Ensure the generated function is named as python_function.", 
+        "aave_prompt": "Yo write a python function to find the maxbetween two numbers, ya dig?\nassert python_function(5,10) == 10\nYou gotta whip up a Python function to handle this problem. You gon' make sure the function name right, which gotta python_function."
+    },  
+    {
+        "category": "Algorithm", 
+        "sae_prompt": "Write a python function to interchange the first and last elements in a list.\nassert python_function([12, 35, 9, 56, 24]) == [24, 35, 9, 56, 12]\nGenerate a Python function to solve this problem. Ensure the generated function is named as python_function.",
+        "aave_prompt": "Aight, come up with a python function that gon' switch up the first and last elements in a list.\nassert python_function([12, 35, 9, 56, 24]) == [24, 35, 9, 56, 12]\nYou gotta whip up a Python function to handle this problem. You gon' make sure the function name right, which gotta python function."
+    }, 
+    {
+        "category": "Algorithm", 
+        "sae_prompt": "Write a python function to find smallest number in a list.\nassert python_function([10, 20, 1, 45, 99]) == 1\nGenerate a Python function to solve this problem. Ensure the generated function is named as python_function.",
+        "aave_prompt": "Here's what you finna do, aight?. Cook up a python function to  find  out the smallest number in a list.\nassert python_function([10, 20, 1, 45, 99]) == 1\nYou gotta whip up a Python function to handle this problem. You gon' make sure the function name right, which gotta python function."
+    }, 
+    { 
+        "category": "QA",
+        "sae_prompt": "When was the ability to use radioactive isotopes to date rock formations developed?", 
+        "aave_prompt": "When they start usin' radioactive isotopes to date rocks?"
+    },
+    {  
+        "category": "QA", 
+        "sae_prompt": "How many large public parks does Fresno have?", 
+        "aave_prompt": "How many big public parks Fresno got?"
+    },  
+    {  
+        "category": "QA",
+        "sae_prompt": "What major crop was brought to China from the west?", 
+        "aave_prompt": "What big crop got brought to China from the west?"
+    }, 
+    {  
+        "category": "QA",
+        "sae_prompt": "Rudyard Kipling was an influential spokesman for what?", 
+        "aave_prompt": "Rudyard Kipling was a big voice for what?"
+    },  
+    { 
+        "category": "QA",
+        "sae_prompt": "What city has the biggest port in Germany?", 
+        "aave_prompt": "What city got the biggest port in Germany?"  
+    }, 
+    { 
+        "category": "QA",
+        "sae_prompt": "When was the prime number theorem proven?", 
+        "aave_prompt": "When did they prove the prime number theorem?"
+    }, 
+    { 
+        "category":"QA",
+        "sae_prompt": "Where is Brazil ranked globally in soybean production?", 
+        "aave_prompt": "Where does Brazil stand in the worldwide soybean game?" 
+    }, 
+    {
+        "category":"QA",
+        "sae_prompt": "What kind of chloroplasts do cryptophytes have?", 
+        "aave_prompt": "What kinda chloroplasts do cryptophytes have?" 
+    }, 
+    {
+        "category":"QA",
+        "sae_prompt": "What principle relates to the formation of faults and the age of the sequences through which they cut?", 
+        "aave_prompt": "What principle deals with how faults form and the age of the layers they cut through?" 
+    }, 
+    {
+        "category":"QA",
+        "sae_prompt": "Besides the analytic property of numbers, what other property of numbers does number theory focus on?", 
+        "aave_prompt": "Besides the analytic property of numbers, what other property does number theory focus on?" 
+    }, 
+    { 
+        "category":"QA",
+        "sae_prompt": "What does `TGIF` stand for?", 
+        "aave_prompt": "What does `TGIF` mean?"
+    }, 
+    { 
+        "category":"QA",
+        "sae_prompt": "What is the immune system?", 
+        "aave_prompt": "What's the immune system?" 
+    }, 
+    { 
+        "category":"QA",
+        "sae_prompt": "What molecules are recognized as foreign by the immune system?", 
+        "aave_prompt": "What molecules the immune system see as foreign?"
+    }, 
+    { 
+        "category":"QA",
+        "sae_prompt": "How is oxygen produced from carbon dioxide on the other planets of the solar system?", 
+        "aave_prompt": "How do planets in the solar system make oxygen from carbon dioxide?" 
+    }, 
+    { 
+        "category":"QA",
+        "sae_prompt": "How many buildings were razed by the Jacksonville fire?", 
+        "aave_prompt": "How many buildings got burned down in that Jacksonville fire?" 
+    }, 
+    { 
+        "category":"QA",
+        "sae_prompt": "What does matter actually have that Newtonian mechanics doesn't address?", 
+        "aave_prompt": "What matter really got that Newtonian mechanics don't mention?"
+    }, 
+    { 
+        "category":"QA",
+        "sae_prompt": "Inflammation occurs during sleep times because of the presence of what molecule?", 
+        "aave_prompt": "Inflammation happens at nighttime 'cause of what molecule?"
+    }, 
+    { 
+        "category":"QA",
+        "sae_prompt": "What is used to estimate emissions?", 
+        "aave_prompt": "What do they use to estimate emissions?" 
+    }, 
+    { 
+        "category":"QA",
+        "sae_prompt": "How many major immune responses do plants have?", 
+        "aave_prompt": "How many major immune responses plants be havin'?" 
+    }, 
+    { 
+        "category":"QA",
+        "sae_prompt": "Time and space are both examples of what type of resource?", 
+        "aave_prompt": "Time and space are both what kinda resources?" 
+    }, 
+    { 
+        "category":"QA",
+        "sae_prompt": "How much rain per year does Fresno get on average?", 
+        "aave_prompt": "How much rain does Fresno get on average each year?"
+    }, 
+    { 
+        "category":"QA",
+        "sae_prompt": "Xenoliths are picked up by what and deposited into the matrix of igneous rocks?", 
+        "aave_prompt": "Xenoliths get picked up by what and dropped into the matrix of igneous rocks?"
+    }, 
+    { 
+        "category":"QA",
+        "sae_prompt": "What theology states that faith alone isn't enough to justify man?", 
+        "aave_prompt": "What theology says that faith alone ain't enough for justification?" 
+    }, 
+    { 
+        "category":"QA",
+        "sae_prompt": "What type of motivators are achievement and self determination considered?", 
+        "aave_prompt": "What type of motivators are achievement and self-determination?" 
+    }, 
+    { 
+        "category":"QA",
+        "sae_prompt": "What month is the warmest in Fresno?", 
+        "aave_prompt": "What month be the warmest in Fresno?"
+    }, 
+    { 
+        "category":"QA",
+        "sae_prompt": "What are the stages in a compound engine called?", 
+        "aave_prompt": "What they call the stages in a compound engine?"
+    }, 
+    { 
+        "category":"QA",
+        "sae_prompt": "What is the largest city in Poland?", 
+        "aave_prompt": "What's the biggest city in Poland?" 
+    }, 
+    { 
+        "category":"QA",
+        "sae_prompt": "What is the study of proteins involved in immune response known as?", 
+        "aave_prompt": "What they call the study of proteins that deal with immune response?"
+    }, 
+    { 
+        "category":"QA",
+        "sae_prompt": "What does it mean when a harmonic series diverges?", 
+        "aave_prompt": "What it mean when a harmonic series diverges?"
+    }, 
+    { 
+        "category":"QA",
+        "sae_prompt": "From which countries did the Norse originate?", 
+        "aave_prompt": "Where the Norse come from?"
+    },    
+    {  
+            "category": "ELI5", 
+            "sae_prompt": "How do scientists find the age of a living tree without actually cutting it down and counting the rings?", 
+            "aave_prompt": "How do scientists be knowing how old a tree is if they don't cut it down and count the rings?"
+    },
+    {
+        "category": "ELI5", 
+        "sae_prompt": "What factors determine whether a cut will heal properly or leave a scar?", 
+        "aave_prompt": "What make a cut completely heal or leave a scar?"
+    },
+    {  
+        "category": "ELI5", 
+        "sae_prompt": "Why is the QWERTY keyboard configured the way that it is?", 
+        "aave_prompt": "Why is the QWERTY keyboard set up like that?"
+    },
+    {  
+        "category": "ELI5", 
+        "sae_prompt": "How do television channels make money?", 
+        "aave_prompt": "How do TV channels be making they money?"
+    }, 
+    {
+        "category": "ELI5", 
+        "sae_prompt": "When birds walk, why do their heads bob back and fourth?", 
+        "aave_prompt": "Why do birds be bobbing they heads as they walk?"
+    },
+    {
+        "category": "ELI5", 
+        "sae_prompt": "In the US, why are counties on the west side of the country so much bigger than counties in the east?", 
+        "aave_prompt": "Why counties on the west side of the country be way bigger than counties in the east?"
+    }, 
+    {
+        "category": "ELI5", 
+        "sae_prompt": "What is actually happening when you crack your knuckles/fingers?", 
+        "aave_prompt": "What actually happen when you crack your knuckles?"
+    }, 
+    {
+        "category": "ELI5", 
+        "sae_prompt": "How do birds all fly perfectly in sync with each other when in a flock?", 
+        "aave_prompt": "How do birds be flying perfectly in sync when they in a flock?"
+    }, 
+    {
+        "category": "ELI5", 
+        "sae_prompt": "What is the biology behind being a light sleeper vs a heavy sleeper?", 
+        "aave_prompt": "Whats the science behind whether you a light or heavy sleeper?"
+    }, 
+    {
+        "category": "ELI5", 
+        "sae_prompt": "What is a quantum computer and how does it work?", 
+        "aave_prompt": "What's a quantum computer and how it work?"
+    },  
+    {
+        "category": "ELI5", 
+        "sae_prompt": "Why is it advantageous for companies to pay employees biweekly?", 
+        "aave_prompt": "Why companies gotta pay you biweekly?"
+    },  
+    {
+        "category": "ELI5", 
+        "sae_prompt": "Is there a plateau of how energized you can get by caffeine?", 
+        "aave_prompt": "Is there a limit to how much energy you get from caffeine?"
+    },
+    {
+        "category": "ELI5", 
+        "sae_prompt": "What happens to the property and assets of criminals sentenced to life in prison?", 
+        "aave_prompt": "If you get a life sentence what happens to all yo property and assets?" 
+    },  
+    {
+        "category": "ELI5", 
+        "sae_prompt": "What is it about the digestive system of animals that makes them able to eat raw meat, whereas it would make a human sick?", 
+        "aave_prompt": "How come wild animals can digest raw meat without getting sick and we cant?" 
+    }, 
+    {
+        "category": "ELI5", 
+        "sae_prompt": "Why is the majority of the human population right hand dominant?", 
+        "aave_prompt": "Why most of us be right handed?"
+    },
+    {  
+        "category": "ELI5", 
+        "sae_prompt": "What happens when we get a song stuck in our heads? Why does it happen?", 
+        "aave_prompt": "What happens when a song get stuck in your head?  Why is that?"
+    },  
+    {
+        "category": "ELI5", 
+        "sae_prompt": "How is it possible to get vitamin D from sun light?", 
+        "aave_prompt": "How are we getting vitamin D from sunlight?"
+    },
+    {
+        "category": "ELI5", 
+        "sae_prompt": "Why do banks not process transactions during weekends?", 
+        "aave_prompt": "Why don't banks be processing transactions on the weekend?"
+    }, 
+    {  
+        "category": "ELI5", 
+        "sae_prompt": "Why do liquids like coffee and soda dehydrate people despite being mostly water?", 
+        "aave_prompt": "Why coffee and soda dehydrate you if they mostly water?"
+    }, 
+    {
+        "category": "ELI5", 
+        "sae_prompt": "Why does my vision go black for a few seconds when I stand up sometimes?", 
+        "aave_prompt": "Why sometimes my vision be going black when I stand up?"
+    },   
+    {
+        "category": "ELI5", 
+        "sae_prompt": "When you play a game like chess against a computer on \"easy,\" does it simply look at less possible moves/scenarios or does it actually try to lose?", 
+        "aave_prompt": "When you play games like chess on easy difficulty, is the computer just calculating less or it actually trying to lose?"
+    },  
+    {
+        "category": "ELI5", 
+        "sae_prompt": "Do animals ever get sick of eating the same thing everyday?", 
+        "aave_prompt": "Do animals get sick eating the same shit everyday?"
+    },   
+    {
+        "category": "ELI5", 
+        "sae_prompt": "Why do some restaurants not post prices for alcoholic beverages on their menus? Appetizers, entrees, sides and desserts have prices but beer, wine and liquor do not.", 
+        "aave_prompt": "Why some restaurants dont got the alcohol prices on they menu? Appetizers, entrees, sides and desserts all got a price but not beer, wine, and liquor."
+    }, 
+    {
+        "category": "ELI5", 
+        "sae_prompt": "Why is it much easier to put a ring on a finger than to take it off?", 
+        "aave_prompt": "Why do it be way easier putting on a ring than removing it?"
+    },  
+    {
+        "category": "ELI5", 
+        "sae_prompt": "How do some people have a distinct body odor?", 
+        "aave_prompt": "Why some people be having a distinct smell to em?"
+    },  
+    {
+        "category": "ELI5", 
+        "sae_prompt": "Why do people have a hard time pronouncing sounds from a new language, even though their vocal chords are capable of making that sound?", 
+        "aave_prompt": "If our vocal cords can make all these sounds why is it so hard pronouncing shit in another language?"
+    }, 
+    {  
+        "category": "Social", 
+        "sae_prompt": "Someone acts warm and interested when we talk in person, but they barely respond to my messages afterward. Am I being led on, or am I just overthinking it?",
+        "aave_prompt": "This one person keep acting all warm and interested when we talking face to face but barely responding to my texts after. Am I being played or I'm deeping it?"
+    },
+    {  
+        "category": "Social", 
+        "sae_prompt": "I forgot to reply to an important email for several days, and now I'm anxious about responding because I feel like I look irresponsible. What should I say?",
+        "aave_prompt": "I forgot to reply to an important email from a few days ago and now I'm anxious bout responding bc I feel like imma look irresponsible. What should I say?"
+    }, 
+    {  
+        "category": "Social", 
+        "sae_prompt": "I want to ask for help with something, but I feel embarrassed because I think I should have been able to handle it on my own. How do I get over that feeling?",
+        "aave_prompt": "I want to ask for help with sumn but I'm embarrassed bc I feel like I couldve done it on my own. How I get past that feeling?"
+    },
+    {  
+        "category": "Social", 
+        "sae_prompt": "I care about someone, but lately being around them has started to feel draining instead of comforting. How do I know if I need space without feeling guilty?",
+        "aave_prompt": "I care for someone but being around them lately starting to be draining rather than comforting. How do I let em know I need space without feeling guilty?"
+    }
+    ]
+}  
