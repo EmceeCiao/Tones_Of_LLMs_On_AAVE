@@ -1,0 +1,44 @@
+PHASE 7 — JACCARD SIMILARITY: ft_model_1_with_sysprompt (frozen set)
+==============================================================
+Source file : ft_model_1_with_sysprompt__20260501T234707Z.jsonl
+Pairs       : 15
+Threshold   : token Jaccard ≥ 0.8 flagged as collapsed
+
+TOKEN-LEVEL JACCARD (unigrams)
+  Mean   : 0.3562
+  Median : 0.3421
+  Min    : 0.2713  (prompt_index 12)
+  Max    : 0.4881  (prompt_index 4)
+  Stdev  : 0.0635
+
+BIGRAM-LEVEL JACCARD
+  Mean   : 0.1331
+  Median : 0.1150
+  Min    : 0.0550
+  Max    : 0.3529
+
+BY CATEGORY (token Jaccard)
+  Algorithm     n=2  mean=0.3947  median=0.3947  min=0.3036  max=0.4857
+  ELI5          n=4  mean=0.3392  median=0.3418  min=0.3259  max=0.3475
+  QA            n=3  mean=0.3586  median=0.2959  min=0.2917  max=0.4881
+  Social        n=6  mean=0.3536  median=0.3645  min=0.2713  max=0.4000
+
+PER-PAIR SCORES
+----------------------------------------
+  P01  [Algorithm ]  token=0.4857  bigram=0.3529
+  P02  [Algorithm ]  token=0.3036  bigram=0.2073
+  P03  [QA        ]  token=0.2917  bigram=0.0746
+  P04  [QA        ]  token=0.4881  bigram=0.2778
+  P05  [QA        ]  token=0.2959  bigram=0.1111
+  P06  [ELI5      ]  token=0.3421  bigram=0.0652
+  P07  [ELI5      ]  token=0.3475  bigram=0.1294
+  P08  [ELI5      ]  token=0.3259  bigram=0.0902
+  P09  [ELI5      ]  token=0.3415  bigram=0.0828
+  P10  [Social    ]  token=0.3719  bigram=0.0710
+  P11  [Social    ]  token=0.3571  bigram=0.1162
+  P12  [Social    ]  token=0.2713  bigram=0.0550
+  P13  [Social    ]  token=0.3822  bigram=0.1330
+  P14  [Social    ]  token=0.3389  bigram=0.1150
+  P15  [Social    ]  token=0.4000  bigram=0.1157
+
+No collapsed pairs detected (all token Jaccard < 0.8).
