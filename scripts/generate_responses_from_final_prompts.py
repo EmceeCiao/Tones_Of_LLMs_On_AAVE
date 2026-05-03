@@ -12,7 +12,7 @@ INPUT_JSON_PATH = "final_prompts.json"
 ROUND_SCOPE = "round 1"   # "round 1", "round 2", "leftover", or "all"
 
 MODEL_NAME = "gpt-4.1"
-N_TRIALS = 5   # set to 5 if you want repeated runs per prompt variant
+N_TRIALS = 1   # set to 5 if you want repeated runs per prompt variant
 SEED = 12345
 TEMPERATURE = 1
 TOP_P = 1
