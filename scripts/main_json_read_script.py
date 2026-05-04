@@ -1,7 +1,7 @@
 import json
 from pathlib import Path  
-OUTPUT_FILE = "to_dpo_results.json"
-INPUT_FILE = "./dataset/study_logs_dpo/dpo_responses_20260428T065048Z.jsonl" 
+OUTPUT_FILE = "Final_Dataset/round1_readable_responses.json"
+INPUT_FILE = "Final_Dataset/study_logs/round1_20260419T154412Z.jsonl"
 
 def extract_selected_fields(input_file, output_file=OUTPUT_FILE):
     text = Path(input_file).read_text(encoding="utf-8")

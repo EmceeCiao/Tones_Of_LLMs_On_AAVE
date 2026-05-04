@@ -8,7 +8,7 @@ from openai import OpenAI
 
 client = OpenAI()
 
-INPUT_JSON_PATH = "final_prompts.json"
+INPUT_JSON_PATH = "Final_Dataset/final_prompts.json"
 ROUND_SCOPE = "round 1"   # "round 1", "round 2", "leftover", or "all"
 
 MODEL_NAME = "gpt-4.1"
@@ -21,7 +21,7 @@ TOP_P = 1
 # that your model/SDK supports in the request itself.
 REASONING_TYPE = "medium"
 
-OUTPUT_DIR = "study_logs"
+OUTPUT_DIR = "Final_Dataset/study_logs"
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 
 run_id = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%SZ")

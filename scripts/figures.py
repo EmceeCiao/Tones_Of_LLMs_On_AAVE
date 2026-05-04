@@ -39,7 +39,7 @@ Output:
   figures/judge_verdicts.{png,pdf}
 
 Usage:
-    python figures.py
+    python scripts/figures.py
 """
 
 from __future__ import annotations
@@ -56,7 +56,7 @@ import openpyxl
 
 # ── Paths ─────────────────────────────────────────────────────────────────────
 
-REPO        = Path(__file__).resolve().parent
+REPO        = Path(__file__).resolve().parent.parent
 R1_XLSX     = REPO / "Final_Dataset" / "round1_repeated_runs_similarity.xlsx"
 R2_XLSX     = REPO / "Final_Dataset" / "round2_repeated_runs_similarity.xlsx"
 VERDICT_DIR = REPO / "mitigations" / "comparison" / "mitigation_study_logs"

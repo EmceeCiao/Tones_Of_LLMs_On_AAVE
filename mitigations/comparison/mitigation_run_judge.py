@@ -1,28 +1,28 @@
 #!/usr/bin/env python3
 """
-phase7_run_judge.py
+mitigation_run_judge.py
 
 Runs the user-attribution drift judge over every condition produced by
-phase7_regression_check.py.  For each condition JSONL in study_logs_phase7/,
+mitigation_check.py.  For each condition JSONL in mitigation_study_logs/,
 it pairs SAE + AAVE responses by prompt_index, calls GPT-4.1 as judge
 (dual-order), and writes per-condition verdict files.
 
 After all conditions are judged it prints a cross-condition comparison table
 so you can see at a glance which conditions reduced / introduced drift.
 
-Output layout (all in study_logs_phase7/):
+Output layout (all in mitigation_study_logs/):
   <condition_name>__verdicts.jsonl   — one record per (condition, prompt_index)
   judge_comparison_summary.txt       — cross-condition FLAGGED counts
 
 Usage:
-    # Judge all conditions found in study_logs_phase7/:
-    python scripts/phase7_run_judge.py
+    # Judge all conditions found in mitigation_study_logs/:
+    python mitigations/comparison/mitigation_run_judge.py
 
     # Judge specific condition files by name prefix:
-    python scripts/phase7_run_judge.py --conditions ft_model_1_only base_sysprompt_run1
+    python mitigations/comparison/mitigation_run_judge.py --conditions ft_model_1_only base_sysprompt_run1
 
     # Skip cost confirmation and resume partial runs:
-    python scripts/phase7_run_judge.py --yes --resume
+    python mitigations/comparison/mitigation_run_judge.py --yes --resume
 """
 
 from __future__ import annotations
@@ -48,8 +48,9 @@ from tqdm import tqdm
 # ---------------------------------------------------------------------------
 # Paths
 # ---------------------------------------------------------------------------
-REPO_ROOT   = Path(__file__).resolve().parent.parent
-LOGS_DIR    = REPO_ROOT / "study_logs_phase7"
+SCRIPT_DIR  = Path(__file__).resolve().parent
+REPO_ROOT   = SCRIPT_DIR.parent.parent
+LOGS_DIR    = SCRIPT_DIR / "mitigation_study_logs"
 SUMMARY_TXT = LOGS_DIR / "judge_comparison_summary.txt"
 
 # ---------------------------------------------------------------------------

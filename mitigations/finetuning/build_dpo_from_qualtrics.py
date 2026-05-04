@@ -35,10 +35,11 @@ REPO_ROOT = SCRIPT_DIR.parent.parent
 
 QUALTRICS_DPO_JSONL = SCRIPT_DIR / "qualtrics_dpo_pairs.jsonl"
 
-FINAL_RESPONSES_JSON = REPO_ROOT / "dataset" / "Final_Dataset" / "final_prompt_responses.json"
+FINAL_RESPONSES_JSON = REPO_ROOT / "Final_Dataset" / "final_prompt_responses.json"
 QUALTRICS_XLSX = (
     REPO_ROOT
     / "Round_1_Results"
+    / "Qualtrics_Data"
     / "LLM & AAVE ROUND 1_April 29, 2026_02.09_aggregated.xlsx"
 )
 

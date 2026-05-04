@@ -3,7 +3,7 @@
 mitigation_check.py
 
 Runs 6 experiment conditions over all Round 1 prompts (30 variants: 15 SAE + 15 AAVE).
-Each condition streams results to its own JSONL file under study_logs_phase7/.
+Each condition streams results to its own JSONL file under mitigation_study_logs/.
 
 Conditions:
   1. ft_model_1_only          — FT Model 1, no system prompt
@@ -15,11 +15,11 @@ Conditions:
 
 Usage:
     # Run all 6 conditions:
-    python scripts/phase7_regression_check.py
+    python mitigations/comparison/mitigation_check.py
 
     # Run specific conditions only (by name or 1-indexed number):
-    python scripts/phase7_regression_check.py --conditions 1 3 5
-    python scripts/phase7_regression_check.py --conditions ft_model_1_only base_sysprompt_run1
+    python mitigations/comparison/mitigation_check.py --conditions 1 3 5
+    python mitigations/comparison/mitigation_check.py --conditions ft_model_1_only base_sysprompt_run1
 """
 
 from __future__ import annotations
@@ -36,10 +36,11 @@ from openai import OpenAI
 # ---------------------------------------------------------------------------
 # Paths
 # ---------------------------------------------------------------------------
-REPO_ROOT       = Path(__file__).resolve().parent.parent
+SCRIPT_DIR      = Path(__file__).resolve().parent
+REPO_ROOT       = SCRIPT_DIR.parent.parent
 PROMPTS_FILE    = REPO_ROOT / "Final_Dataset" / "final_prompts.json"
 SYSTEM_PROMPT_FILE = REPO_ROOT / "mitigations" / "system_prompt.txt"
-OUTPUT_DIR      = REPO_ROOT / "study_logs_phase7"
+OUTPUT_DIR      = SCRIPT_DIR / "mitigation_study_logs"
 
 # ---------------------------------------------------------------------------
 # Fill in your fine-tuned model IDs once Phase 6 is complete.

@@ -2,8 +2,7 @@
 """
 run_dpo_training_v2.py
 
-Uploads openai_dpo_train_v2.jsonl (exact OpenAI DPO format with tools[] and
-parallel_tool_calls) and launches a DPO fine-tuning job.
+Uploads openai_dpo_train.jsonl and launches a DPO fine-tuning job.
 
 Usage:
     OPENAI_API_KEY=<key> python mitigations/finetuning/run_dpo_training_v2.py
@@ -23,7 +22,7 @@ from pathlib import Path
 from openai import OpenAI
 
 SCRIPT_DIR    = Path(__file__).resolve().parent
-TRAINING_FILE = SCRIPT_DIR / "openai_dpo_train_v2.jsonl"
+TRAINING_FILE = SCRIPT_DIR / "openai_dpo_train.jsonl"
 
 BASE_MODEL = "gpt-4.1-2025-04-14"
 DPO_BETA   = 0.1   # KL-penalty coefficient; lower = more deviation from base model allowed

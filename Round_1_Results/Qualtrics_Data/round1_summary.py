@@ -19,11 +19,12 @@ from pathlib import Path
 from aggregate_round1_qualtrics import dense_row, read_xlsx_first_sheet, write_xlsx
 
 
-ROOT = Path(__file__).resolve().parents[1]
+SCRIPT_DIR = Path(__file__).resolve().parent
+REPO_ROOT = SCRIPT_DIR.parents[1]
 DEFAULT_AGGREGATED = (
-    ROOT / "Round_1_Results" / "LLM & AAVE ROUND 1_April 29, 2026_02.09_aggregated.xlsx"
+    SCRIPT_DIR / "LLM & AAVE ROUND 1_April 29, 2026_02.09_aggregated.xlsx"
 )
-DEFAULT_PROMPT_MAP = ROOT / "dataset" / "Final_Dataset" / "Qualtrics" / "Round_1_Qualtrics.json"
+DEFAULT_PROMPT_MAP = REPO_ROOT / "Final_Dataset" / "Qualtrics" / "Round_1" / "Round_1_Qualtrics.json"
 DEFAULT_OUTPUT = DEFAULT_AGGREGATED.with_name(DEFAULT_AGGREGATED.stem + "_simple_summary.xlsx")
 
 SCORE_METRICS = ("Helpful", "Clarity", "Warmth")

@@ -22,8 +22,8 @@ from zipfile import ZIP_DEFLATED, ZipFile
 import xml.etree.ElementTree as ET
 
 
-ROOT = Path(__file__).resolve().parents[1]
-DEFAULT_INPUT = ROOT / "Round_1_Results" / "LLM & AAVE ROUND 1_April 29, 2026_02.09.xlsx"
+SCRIPT_DIR = Path(__file__).resolve().parent
+DEFAULT_INPUT = SCRIPT_DIR / "LLM & AAVE ROUND 1_April 29, 2026_02.09.xlsx"
 DEFAULT_OUTPUT = DEFAULT_INPUT.with_name(DEFAULT_INPUT.stem + "_aggregated.xlsx")
 
 MAIN_NS = "http://schemas.openxmlformats.org/spreadsheetml/2006/main"

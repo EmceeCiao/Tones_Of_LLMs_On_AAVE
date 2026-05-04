@@ -1,24 +1,24 @@
 #!/usr/bin/env python3
 """
-phase7_jaccard.py
+mitigation_jaccard.py
 
 Computes token-level and bigram-level Jaccard similarity between SAE and AAVE
-responses for a given phase7 condition JSONL.  No API calls required.
+responses for a given mitigation condition JSONL.  No API calls required.
 
 A low Jaccard score means the responses are genuinely different in surface form.
 A score near 1.0 means the model collapsed to nearly identical outputs regardless
 of dialect — which would undermine the study design.
 
 Output:
-  study_logs_phase7/jaccard_<condition>__<timestamp>.csv   — per-pair scores
-  study_logs_phase7/jaccard_<condition>__<timestamp>.txt   — summary
+  mitigation_study_logs/jaccard_<condition>__<timestamp>.csv   — per-pair scores
+  mitigation_study_logs/jaccard_<condition>__<timestamp>.txt   — summary
 
 Usage:
     # Analyse the default frozen set (ft_model_1_with_sysprompt, latest run):
-    python scripts/phase7_jaccard.py
+    python mitigations/comparison/mitigation_jaccard.py
 
     # Analyse a specific file:
-    python scripts/phase7_jaccard.py --input study_logs_phase7/ft_model_1_with_sysprompt__20260501T234707Z.jsonl
+    python mitigations/comparison/mitigation_jaccard.py --input mitigations/comparison/mitigation_study_logs/ft_model_1_with_sysprompt__20260501T234707Z.jsonl
 """
 
 from __future__ import annotations
@@ -32,8 +32,8 @@ from collections import defaultdict
 from datetime import datetime, timezone
 from pathlib import Path
 
-REPO_ROOT    = Path(__file__).resolve().parent.parent
-LOGS_DIR     = REPO_ROOT / "study_logs_phase7"
+SCRIPT_DIR   = Path(__file__).resolve().parent
+LOGS_DIR     = SCRIPT_DIR / "mitigation_study_logs"
 DEFAULT_FILE = LOGS_DIR / "ft_model_1_with_sysprompt__20260501T234707Z.jsonl"
 
 HIGH_SIMILARITY_THRESHOLD = 0.80   # flag pairs above this as potentially collapsed
