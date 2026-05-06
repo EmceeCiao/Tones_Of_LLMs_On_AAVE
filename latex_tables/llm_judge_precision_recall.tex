@@ -1,0 +1,40 @@
+\begin{table}[htbp]
+\centering
+\caption{\textbf{LLM-as-Judge per-class precision, recall, and F1 across 12 prompt-engineering variants.}}
+\label{tab:llm-judge-precision-recall}
+\renewcommand{\arraystretch}{1.4}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{|l|l|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Variant} & \textbf{Description} & \textbf{SAE P} & \textbf{SAE R} & \textbf{SAE F1} & \textbf{SAE n} & \textbf{AAVE P} & \textbf{AAVE R} & \textbf{AAVE F1} & \textbf{AAVE n} & \textbf{NoPref P} & \textbf{NoPref R} & \textbf{NoPref F1} & \textbf{NoPref n} \\
+\hline
+v1a           & Zero-shot; rubric + prompt + responses only; direct label; SAE-first only              & 33.3\%  & 100.0\% & 0.50          & 1  & 100.0\% & 33.3\% & 0.50 & 3  & 50.0\%  & 50.0\%  & 0.50          & 2  \\
+\hline
+v1b           & Zero-shot; rubric + prompt + responses only; direct label; dual-order                  & 22.2\%  & 100.0\% & 0.36          & 2  & 100.0\% & 16.7\% & 0.29 & 6  & 100.0\% & 50.0\%  & 0.67          & 4  \\
+\hline
+v1b$^\dagger$ & Zero-shot; rubric + prompt + responses only; direct label; multi-model ensemble        & 26.1\%  & 100.0\% & 0.41          & 6  & 100.0\% & 22.2\% & 0.36 & 18 & 77.8\%  & 58.3\%  & 0.67          & 12 \\
+\hline
+v2            & Zero-shot; calibrated rubric instructions; direct label                               & 40.0\%  & 100.0\% & 0.57          & 2  & 100.0\% & 33.3\% & 0.50 & 6  & 60.0\%  & 75.0\%  & 0.67          & 4  \\
+\hline
+v3            & Zero-shot; dimension scores requested; label derived deterministically from score gap  & 50.0\%  & 100.0\% & 0.67          & 2  & 100.0\% & 33.3\% & 0.50 & 6  & 66.7\%  & 100.0\% & 0.80          & 4  \\
+\hline
+v4            & Zero-shot; GPT-5 with medium reasoning effort; direct label                           & 26.7\%  & 100.0\% & 0.42          & 4  & 100.0\% & 33.3\% & 0.50 & 12 & 80.0\%  & 50.0\%  & 0.62          & 8  \\
+\hline
+v5            & Zero-shot; rubric guidance distilled from human Round 1 rationales; direct label      & 50.0\%  & 100.0\% & 0.67          & 2  & 100.0\% & 16.7\% & 0.29 & 6  & 57.1\%  & 100.0\% & 0.73          & 4  \\
+\hline
+v6            & Zero-shot; rationale-informed dimension scores; label derived deterministically        & 40.0\%  & 100.0\% & 0.57          & 2  & 100.0\% & 50.0\% & 0.67 & 6  & 100.0\% & 100.0\% & \textbf{1.00} & 4  \\
+\hline
+v7            & Zero-shot; study-evaluator persona framing; direct label                              & 40.0\%  & 100.0\% & 0.57          & 2  & 100.0\% & 33.3\% & 0.50 & 6  & 60.0\%  & 75.0\%  & 0.67          & 4  \\
+\hline
+v8            & Zero-shot; stricter rationale-informed dimension scores; label derived deterministically & 50.0\% & 100.0\% & 0.67          & 2  & 100.0\% & 33.3\% & 0.50 & 6  & 66.7\%  & 100.0\% & 0.80          & 4  \\
+\hline
+v9            & Zero-shot; rationale-informed dimension scores; P05 excluded (noisy label)            & 100.0\% & 100.0\% & \textbf{1.00} & 2  & 100.0\% & 50.0\% & 0.67 & 4  & 66.7\%  & 100.0\% & 0.80          & 4  \\
+\hline
+v10           & Few-shot; synthetic exemplars added; dimension scores; label derived deterministically & 50.0\%  & 100.0\% & 0.67          & 2  & 100.0\% & 50.0\% & 0.67 & 6  & 80.0\%  & 100.0\% & 0.89          & 4  \\
+\hline
+v11           & Few-shot; synthetic exemplars; abstains when orderings disagree or score margin is small & 50.0\% & 100.0\% & 0.67          & 2  & 100.0\% & 50.0\% & 0.67 & 6  & 80.0\%  & 100.0\% & 0.89          & 4  \\
+\hline
+v12           & Few-shot; synthetic exemplars; intentionally conservative (small gaps $\to$ No Preference) & 50.0\% & 100.0\% & 0.67        & 2  & 100.0\% & 33.3\% & 0.50 & 6  & 66.7\%  & 100.0\% & 0.80          & 4  \\
+\hline
+\end{tabular}}
+\end{table}

@@ -2,5 +2,8 @@ __pycache__
 .pytest_cache
 .venv
 firebase_service_acc.json
+app.db 
+.DS_Store 
+.claude
 app.db
 .DS_Store

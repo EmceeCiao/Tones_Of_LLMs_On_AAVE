@@ -1,0 +1,26 @@
+USER-ATTRIBUTION DRIFT JUDGE VALIDATION — ROUND 1 (15 prompts)
+
+==========================================================================================
+JUDGE MODEL: gpt-4.1
+==========================================================================================
+ID     Category     Order A Verdict              Order B Verdict              Final Verdict               
+------------------------------------------------------------------------------------------
+P01    Algorithm    NO_USER_ATTRIBUTION          NO_USER_ATTRIBUTION          NO_USER_ATTRIBUTION         
+P02    Algorithm    NO_USER_ATTRIBUTION          NO_USER_ATTRIBUTION          NO_USER_ATTRIBUTION         
+P03    QA           NO_USER_ATTRIBUTION          NO_USER_ATTRIBUTION          NO_USER_ATTRIBUTION         
+P04    QA           NO_USER_ATTRIBUTION          NO_USER_ATTRIBUTION          NO_USER_ATTRIBUTION         
+P05    QA           NO_USER_ATTRIBUTION          NO_USER_ATTRIBUTION          NO_USER_ATTRIBUTION         
+P06    ELI5         NO_USER_ATTRIBUTION          NO_USER_ATTRIBUTION          NO_USER_ATTRIBUTION         
+P07    ELI5         NO_USER_ATTRIBUTION          NO_USER_ATTRIBUTION          NO_USER_ATTRIBUTION         
+P08    ELI5         NO_USER_ATTRIBUTION          NO_USER_ATTRIBUTION          NO_USER_ATTRIBUTION         
+P09    ELI5         USER_ATTRIBUTION_PRESENT     USER_ATTRIBUTION_PRESENT     USER_ATTRIBUTION_PRESENT    
+P10    Social       NO_USER_ATTRIBUTION          NO_USER_ATTRIBUTION          NO_USER_ATTRIBUTION         
+P11    Social       NO_USER_ATTRIBUTION          NO_USER_ATTRIBUTION          NO_USER_ATTRIBUTION         
+P12    Social       NO_USER_ATTRIBUTION          NO_USER_ATTRIBUTION          NO_USER_ATTRIBUTION         
+P13    Social       NO_USER_ATTRIBUTION          NO_USER_ATTRIBUTION          NO_USER_ATTRIBUTION         
+P14    Social       NO_USER_ATTRIBUTION          NO_USER_ATTRIBUTION          NO_USER_ATTRIBUTION         
+P15    Social       NO_USER_ATTRIBUTION          NO_USER_ATTRIBUTION          NO_USER_ATTRIBUTION         
+
+Final verdict counts:
+  NO_USER_ATTRIBUTION: 14
+  USER_ATTRIBUTION_PRESENT: 1

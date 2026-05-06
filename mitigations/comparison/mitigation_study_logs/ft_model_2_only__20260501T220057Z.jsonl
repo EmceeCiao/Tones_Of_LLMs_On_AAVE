@@ -1,0 +1,1 @@
+{"record_type": "experiment_config", "timestamp_utc": "2026-05-01T22:00:57.031215+00:00", "config": {"run_id": "20260501T220057Z", "condition_name": "ft_model_2_only", "model": "ft:gpt-4.1-2025-04-14:personal:aave-dpo-2:DaZ4HKta", "use_system_prompt": false, "temperature": 1, "top_p": 1, "n_trials": 1, "num_prompt_items": 15}}

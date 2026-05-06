@@ -1,0 +1,16 @@
+prompt_index,category,token_jaccard,bigram_jaccard,sae_token_count,aave_token_count,flag_collapsed
+1,Algorithm,0.4857,0.3529,68,103,False
+2,Algorithm,0.3036,0.2073,43,66,False
+3,QA,0.2917,0.0746,163,206,False
+4,QA,0.4881,0.2778,96,119,False
+5,QA,0.2959,0.1111,200,176,False
+6,ELI5,0.3421,0.0652,560,386,False
+7,ELI5,0.3475,0.1294,419,329,False
+8,ELI5,0.3259,0.0902,352,412,False
+9,ELI5,0.3415,0.0828,410,342,False
+10,Social,0.3719,0.071,326,249,False
+11,Social,0.3571,0.1162,332,296,False
+12,Social,0.2713,0.055,412,287,False
+13,Social,0.3822,0.133,246,201,False
+14,Social,0.3389,0.115,251,292,False
+15,Social,0.4,0.1157,359,339,False

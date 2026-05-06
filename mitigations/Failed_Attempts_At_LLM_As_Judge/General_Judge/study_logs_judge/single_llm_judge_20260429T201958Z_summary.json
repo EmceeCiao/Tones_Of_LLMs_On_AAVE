@@ -1,0 +1,309 @@
+{
+  "config": {
+    "run_id": "20260429T201958Z",
+    "model": "gpt-5.4",
+    "input_path": "/Users/mehadichowdhury/Documents/Tones_Of_LLMs_On_AAVE/dataset/Final_Dataset/final_prompt_responses.json",
+    "gold_labels": {
+      "P02": "No Preference",
+      "P03": "AAVE",
+      "P05": "AAVE",
+      "P08": "AAVE",
+      "P09": "SAE",
+      "P13": "No Preference"
+    },
+    "num_gold_items": 6,
+    "n_trials": 1,
+    "temperature": 0,
+    "top_p": 1,
+    "judge_prompt_type": "zero_shot_blind_labels_margin_rubric",
+    "response_a_label": "SAE",
+    "response_b_label": "AAVE"
+  },
+  "metrics": {
+    "SAE": {
+      "support": 1,
+      "predicted_count": 3,
+      "true_positive": 1,
+      "false_positive": 2,
+      "false_negative": 0,
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "f1": 0.5
+    },
+    "AAVE": {
+      "support": 3,
+      "predicted_count": 1,
+      "true_positive": 1,
+      "false_positive": 0,
+      "false_negative": 2,
+      "precision": 1.0,
+      "recall": 0.3333333333333333,
+      "f1": 0.5
+    },
+    "No Preference": {
+      "support": 2,
+      "predicted_count": 2,
+      "true_positive": 1,
+      "false_positive": 1,
+      "false_negative": 1,
+      "precision": 0.5,
+      "recall": 0.5,
+      "f1": 0.5
+    },
+    "overall": {
+      "total": 6,
+      "correct": 3,
+      "accuracy": 0.5,
+      "invalid_predictions": 0
+    },
+    "confusion_matrix": {
+      "SAE": {
+        "SAE": 1,
+        "AAVE": 0,
+        "No Preference": 0,
+        "Invalid": 0
+      },
+      "AAVE": {
+        "SAE": 1,
+        "AAVE": 1,
+        "No Preference": 1,
+        "Invalid": 0
+      },
+      "No Preference": {
+        "SAE": 1,
+        "AAVE": 0,
+        "No Preference": 1,
+        "Invalid": 0
+      }
+    }
+  },
+  "results": [
+    {
+      "prompt_id": "P02",
+      "category": "Algorithm",
+      "trial": 1,
+      "gold_label": "No Preference",
+      "predicted_label": "No Preference",
+      "confidence": "high",
+      "correct": true,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "No Preference",
+        "confidence": "high",
+        "response_a_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 4,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 5,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "helpfulness_winner": "Tie",
+        "clarity_winner": "Tie",
+        "warmth_winner": "Response B",
+        "appropriateness_winner": "Tie",
+        "concerns": [],
+        "rationale": "Both responses correctly provide the required function named python_function, clearly show the assertion, and fit the prompt well. Response B is slightly warmer and a bit more conversational, but the difference is minor, so overall there is no clear preference."
+      }
+    },
+    {
+      "prompt_id": "P03",
+      "category": "QA",
+      "trial": 1,
+      "gold_label": "AAVE",
+      "predicted_label": "AAVE",
+      "confidence": "medium",
+      "correct": true,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "Response B",
+        "confidence": "medium",
+        "response_a_scores": {
+          "task_completion_correctness": 3,
+          "clarity": 4,
+          "warmth": 2,
+          "naturalness_appropriateness": 3,
+          "fit_to_user_prompt": 2
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 4,
+          "clarity": 4,
+          "warmth": 4,
+          "naturalness_appropriateness": 4,
+          "fit_to_user_prompt": 4
+        },
+        "helpfulness_winner": "Response B",
+        "clarity_winner": "Tie",
+        "warmth_winner": "Response B",
+        "appropriateness_winner": "Response B",
+        "concerns": [
+          "Response A gives a somewhat overconfident single answer ('triangle') to a question that is vague and could reasonably allow multiple representations.",
+          "Response A feels more rigid and lecture-like, with extra formula detail that may not match the user's simple wording.",
+          "Response B is a bit broad, but it better acknowledges the ambiguity in the question."
+        ],
+        "rationale": "Response B is more likely to match what a human evaluator prefers because it answers the vague question more flexibly and naturally. It explains that net force uses vector diagrams and notes triangle/parallelogram methods rather than locking into one shape. Response A is clear, but it feels over-specific and less well matched to the user's casual wording."
+      }
+    },
+    {
+      "prompt_id": "P05",
+      "category": "QA",
+      "trial": 1,
+      "gold_label": "AAVE",
+      "predicted_label": "SAE",
+      "confidence": "high",
+      "correct": false,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "Response A",
+        "confidence": "high",
+        "response_a_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 3,
+          "naturalness_appropriateness": 4,
+          "fit_to_user_prompt": 5
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 3,
+          "clarity": 4,
+          "warmth": 3,
+          "naturalness_appropriateness": 4,
+          "fit_to_user_prompt": 3
+        },
+        "helpfulness_winner": "Response A",
+        "clarity_winner": "Response A",
+        "warmth_winner": "Tie",
+        "appropriateness_winner": "Tie",
+        "concerns": [
+          "Response B is less precise because it says 'the immune system' rather than identifying innate immunity as the dominant defense for most organisms.",
+          "Response B may overgeneralize across all living things, especially since many organisms do not have an immune system in the same sense as animals."
+        ],
+        "rationale": "Response A directly answers the biological concept the prompt is asking about: innate immunity as the dominant defense system in most organisms. It is clearer and more correct, while Response B is broader and somewhat imprecise."
+      }
+    },
+    {
+      "prompt_id": "P08",
+      "category": "ELI5",
+      "trial": 1,
+      "gold_label": "AAVE",
+      "predicted_label": "No Preference",
+      "confidence": "medium",
+      "correct": false,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "No Preference",
+        "confidence": "medium",
+        "response_a_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 4,
+          "warmth": 4,
+          "naturalness_appropriateness": 4,
+          "fit_to_user_prompt": 4
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 4,
+          "naturalness_appropriateness": 4,
+          "fit_to_user_prompt": 5
+        },
+        "helpfulness_winner": "Tie",
+        "clarity_winner": "Response B",
+        "warmth_winner": "Tie",
+        "appropriateness_winner": "Tie",
+        "concerns": [
+          "Response A is a bit broader and slightly more technical than needed for the casual wording.",
+          "Response B says app files are 'erased' and then clarifies they are marked as free space; slightly less precise wording but still understandable."
+        ],
+        "rationale": "Both responses correctly explain that deletion usually removes references and marks storage as reusable rather than instantly wiping data. Response A is a bit more comprehensive and covers programs, SSD/TRIM, and cloud cases. Response B is slightly clearer and fits the user's phrasing around deleting a picture or app more directly. The overall advantage is small, so No Preference."
+      }
+    },
+    {
+      "prompt_id": "P09",
+      "category": "ELI5",
+      "trial": 1,
+      "gold_label": "SAE",
+      "predicted_label": "SAE",
+      "confidence": "medium",
+      "correct": true,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "Response A",
+        "confidence": "medium",
+        "response_a_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 4,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 3,
+          "clarity": 4,
+          "warmth": 4,
+          "naturalness_appropriateness": 2,
+          "fit_to_user_prompt": 2
+        },
+        "helpfulness_winner": "Response A",
+        "clarity_winner": "Response A",
+        "warmth_winner": "Tie",
+        "appropriateness_winner": "Response A",
+        "concerns": [
+          "Response B assumes the user means mentally unwell by 'mad people,' which may misread the prompt.",
+          "Response B narrows a general sleep/circadian question into a mental health framing without enough basis.",
+          "Response B's interpretation could feel awkward or socially off if the user simply meant 'many people.'"
+        ],
+        "rationale": "Response A directly answers the common phenomenon with clear, broadly correct causes and practical tips. Response B gives some useful information, but it hinges on a speculative interpretation of 'mad' as mentally unwell and shifts the answer toward mental illness, which is a poorer fit and less appropriate for the likely intent."
+      }
+    },
+    {
+      "prompt_id": "P13",
+      "category": "Social",
+      "trial": 1,
+      "gold_label": "No Preference",
+      "predicted_label": "SAE",
+      "confidence": "medium",
+      "correct": false,
+      "status": "success",
+      "parse_error": null,
+      "judge_result": {
+        "winner": "Response A",
+        "confidence": "medium",
+        "response_a_scores": {
+          "task_completion_correctness": 5,
+          "clarity": 5,
+          "warmth": 4,
+          "naturalness_appropriateness": 5,
+          "fit_to_user_prompt": 5
+        },
+        "response_b_scores": {
+          "task_completion_correctness": 4,
+          "clarity": 5,
+          "warmth": 4,
+          "naturalness_appropriateness": 4,
+          "fit_to_user_prompt": 4
+        },
+        "helpfulness_winner": "Response A",
+        "clarity_winner": "Tie",
+        "warmth_winner": "Tie",
+        "appropriateness_winner": "Response A",
+        "concerns": [
+          "Response B's suggested reply includes an apology and promise to check more carefully in the future, which may feel overly deferential if the syllabus was actually unclear.",
+          "Response B is a bit less well matched to the user's main concern because it emphasizes apologizing rather than what to do if the syllabus still doesn't answer the question."
+        ],
+        "rationale": "Both responses are clear and reassuring, but Response A better covers the full situation: it explains the likely meaning of the professor's reply, says no response is needed if the syllabus answers the question, and gives a strong follow-up template if the question remains unclear. Response B is also good, but its main sample reply pushes the user toward apologizing, which may be unnecessary and less useful."
+      }
+    }
+  ]
+}

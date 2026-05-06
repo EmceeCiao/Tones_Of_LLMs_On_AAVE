@@ -1,0 +1,40 @@
+\begin{table}[htbp]
+\centering
+\caption{\textbf{LLM-as-Judge accuracy and per-prompt verdicts across 12 prompt-engineering variants. Gold labels are Qualtrics majority preferences for 6 prompts (P02, P03, P05, P08, P09, P13). Acc reports accuracy averaged across both presentation orders; Acc(SAE$\to$) and Acc(AAVE$\to$) report accuracy when SAE or AAVE response is shown first. Per-prompt cells indicate whether the judge was correct ($\checkmark$), wrong ($\times$), or order-inconsistent ($\sim$).}}
+\label{tab:llm-judge-accuracy}
+\renewcommand{\arraystretch}{1.4}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{|l|l|l|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Variant} & \textbf{Description} & \textbf{Model} & \textbf{N} & \textbf{Acc} & \textbf{Acc(SAE$\to$)} & \textbf{Acc(AAVE$\to$)} & \textbf{Order} & \textbf{P02} & \textbf{P03} & \textbf{P05} & \textbf{P08} & \textbf{P09} & \textbf{P13} \\
+\hline
+v1a           & Zero-shot; rubric + prompt + responses only; direct label; SAE-first only         & gpt-5.4          & 6 & 50.0\%          & ---    & ---    & ---   &              &              &          &              &              &              \\
+\hline
+v1b           & Zero-shot; rubric + prompt + responses only; direct label; dual-order             & gpt-5.4          & 6 & 41.7\%          & 50.0\% & 33.3\% & 5/6   &              &              &          &              &              &              \\
+\hline
+v1b$^\dagger$ & Zero-shot; rubric + prompt + responses only; direct label; multi-model ensemble   & gpt-5.4/4.1/5.5  & 6 & 47.2\%          & 50.0\% & 44.4\% & 14/18 & $\checkmark$ & $\times$     & $\times$ & $\sim$       & $\checkmark$ & $\times$     \\
+\hline
+v2            & Zero-shot; calibrated rubric instructions; direct label                           & gpt-4.1          & 6 & 58.3\%          & 66.7\% & 50.0\% & 5/6   & $\sim$       & $\checkmark$ & $\times$ & $\times$     & $\checkmark$ & $\checkmark$ \\
+\hline
+v3            & Zero-shot; dimension scores requested; label derived deterministically from score gap & gpt-4.1        & 6 & 66.7\%          & 66.7\% & 66.7\% & 6/6   & $\checkmark$ & $\checkmark$ & $\times$ & $\times$     & $\checkmark$ & $\checkmark$ \\
+\hline
+v4            & Zero-shot; GPT-5 with medium reasoning effort; direct label                       & gpt-5.4, gpt-5.5 & 6 & 50.0\%          & 58.3\% & 41.7\% & 10/12 & $\checkmark$ & $\times$     & $\times$ & $\checkmark$ & $\checkmark$ & $\times$     \\
+\hline
+v5            & Zero-shot; rubric guidance distilled from human Round 1 rationales; direct label  & gpt-4.1          & 6 & 58.3\%          & 66.7\% & 50.0\% & 5/6   & $\checkmark$ & $\sim$       & $\times$ & $\times$     & $\checkmark$ & $\checkmark$ \\
+\hline
+v6            & Zero-shot; rationale-informed dimension scores; label derived deterministically    & gpt-4.1          & 6 & \textbf{75.0\%} & 83.3\% & 66.7\% & 5/6   & $\checkmark$ & $\checkmark$ & $\times$ & $\sim$       & $\checkmark$ & $\checkmark$ \\
+\hline
+v7            & Zero-shot; study-evaluator persona framing; direct label                          & gpt-4.1          & 6 & 58.3\%          & 66.7\% & 50.0\% & 5/6   & $\sim$       & $\checkmark$ & $\times$ & $\times$     & $\checkmark$ & $\checkmark$ \\
+\hline
+v8            & Zero-shot; stricter rationale-informed dimension scores; label derived deterministically & gpt-4.1   & 6 & 66.7\%          & 66.7\% & 66.7\% & 6/6   & $\checkmark$ & $\checkmark$ & $\times$ & $\times$     & $\checkmark$ & $\checkmark$ \\
+\hline
+v9            & Zero-shot; rationale-informed dimension scores; P05 excluded (noisy label)        & gpt-4.1          & 5 & 80.0\%          & 80.0\% & 80.0\% & 5/5   & $\checkmark$ & $\checkmark$ & ---      & $\times$     & $\checkmark$ & $\checkmark$ \\
+\hline
+v10           & Few-shot; synthetic exemplars added; dimension scores; label derived deterministically & gpt-4.1    & 6 & \textbf{75.0\%} & 83.3\% & 66.7\% & 5/6   & $\checkmark$ & $\checkmark$ & $\times$ & $\sim$       & $\checkmark$ & $\checkmark$ \\
+\hline
+v11           & Few-shot; synthetic exemplars; abstains when orderings disagree or score margin is small & gpt-4.1 & 6 & \textbf{75.0\%} & 83.3\% & 66.7\% & 5/6   & $\checkmark$ & $\checkmark$ & $\times$ & $\sim$       & $\checkmark$ & $\checkmark$ \\
+\hline
+v12           & Few-shot; synthetic exemplars; intentionally conservative (small gaps $\to$ No Preference) & gpt-4.1 & 6 & 66.7\%        & 66.7\% & 66.7\% & 6/6   & $\checkmark$ & $\checkmark$ & $\times$ & $\times$     & $\checkmark$ & $\checkmark$ \\
+\hline
+\end{tabular}}
+\end{table}
